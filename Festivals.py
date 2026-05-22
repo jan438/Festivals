@@ -1,8 +1,12 @@
 from reportlab.lib.pagesizes import A3, A4
 from reportlab.pdfgen import canvas
 import os
+import sys
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.ttfonts import TTFont
+from reportlab.pdfbase.pdfmetrics import registerFontFamily
 
-def create_pdf_template(filename, pagesize, title="Festivals"):
+def create_Fesival_pdf(filename, pagesize, title="Festivals"):
     try:
         c = canvas.Canvas(filename, pagesize=pagesize)
         width, height = pagesize
@@ -12,12 +16,22 @@ def create_pdf_template(filename, pagesize, title="Festivals"):
         c.rect(20, 20, width - 40, height - 40)
         c.showPage()
         c.save()
-        print(f"✅ PDF template '{filename}' created successfully.")
+        print(f"✅ PDF Festivals '{filename}' created successfully.")
     except Exception as e:
         print(f"❌ Error creating PDF: {e}")
+        
+if sys.platform[0] == 'l':
+    path = '/home/jan/git/Festivals'
+if sys.platform[0] == 'w':
+    path = "C:/Users/janbo/OneDrive/Documents/GitHub/Festivals"
+os.chdir(path)
 
+pdfmetrics.registerFont(TTFont('LiberationSerif', 'LiberationSerif-Regular.ttf'))
+pdfmetrics.registerFont(TTFont('LiberationSerifBold', 'LiberationSerif-Bold.ttf'))
+pdfmetrics.registerFont(TTFont('LiberationSerifItalic', 'LiberationSerif-Italic.ttf'))
+pdfmetrics.registerFont(TTFont('LiberationSerifBoldItalic', 'LiberationSerif-BoldItalic.ttf'))
 
-create_pdf_template("PDF/Festivals_A4.pdf", A4, title="A4 Template")
-create_pdf_template("PDF/Festivals_A3.pdf", A3, title="A3 Template")
+create_Fesival_pdf("PDF/Festivals_A4.pdf", A4, title="A4 Festivals")
+create_Fesival_pdf("PDF/Festivals_A3.pdf", A3, title="A3 Festivals")
 
 key = input("Wait")
