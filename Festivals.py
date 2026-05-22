@@ -7,13 +7,19 @@ from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfbase.pdfmetrics import registerFontFamily
 
 festivalfont = "LiberationSerif"
+titlefontsizeA3 = 30
+titlefontsizeA4 = 24
 
 def create_Fesival_pdf(filename, pagesize, title="Festivals"):
     try:
         c = canvas.Canvas(filename, pagesize=pagesize)
         width, height = pagesize
-        namewidth = pdfmetrics.stringWidth(title, festivalfont, 24)
-        c.setFont(festivalfont, 24)
+        if pagesize == A3:
+            namewidth = pdfmetrics.stringWidth(title, festivalfont, titlefontsizeA3)
+            c.setFont(festivalfont, titlefontsizeA3)
+        if pagesize == A4:
+            namewidth = pdfmetrics.stringWidth(title, festivalfont, titlefontsizeA4)
+            c.setFont(festivalfont, titlefontsizeA4)
         c.drawCentredString(width / 2, height - 50, title)
         c.setLineWidth(1)
         c.rect(20, 20, width - 40, height - 40)
