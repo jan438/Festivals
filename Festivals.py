@@ -8,7 +8,7 @@ from reportlab.pdfbase.pdfmetrics import registerFontFamily
 
 festivalfont = "LiberationSerif"
 
-def create_Fesival_pdf(filename, pagesize, title="Festivals"):
+def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
     try:
         c = canvas.Canvas(filename, pagesize=pagesize)
         width, height = pagesize
@@ -51,7 +51,7 @@ titlefontsizeA4_name = 'titlefontsizeA4'
 titlefontsizeA4_value = 21
 variable_dict[titlefontsizeA4_name] = titlefontsizeA4_value
 
-create_Fesival_pdf("PDF/Festivals_A4.pdf", A4, title="A4 Festivals")
-create_Fesival_pdf("PDF/Festivals_A3.pdf", A3, title="A3 Festivals")
+create_Fesival_pdf("PDF/Festivals_A4.pdf", "A4", A4, title="A4 Festivals")
+create_Fesival_pdf("PDF/Festivals_A3.pdf", "A3", A3, title="A3 Festivals")
 
 key = input("Wait")
