@@ -14,7 +14,7 @@ def create_Fesival_pdf(filename, pagesize, title="Festivals"):
         width, height = pagesize
         print(f'Pagesize "{pagesize}"')
         if pagesize == A3:
-            retrieved_value = variable_dict[titlefontsizeA3_name]
+            titlefontsizeA3_value = variable_dict[titlefontsizeA3_name]
             namewidth = pdfmetrics.stringWidth(title, festivalfont, titlefontsizeA3_value)
             c.setFont(festivalfont, titlefontsizeA3_value)
         if pagesize == A4:
