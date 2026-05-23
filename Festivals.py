@@ -45,8 +45,9 @@ variable_dict = {}
 titlefontsizeA3_name = 'titlefontsizeA3'
 titlefontsizeA3_value = 42
 variable_dict[titlefontsizeA3_name] = titlefontsizeA3_value
-retrieved_value = variable_dict[titlefontsizeA3_name]
-print(f'{titlefontsizeA3_name}: {retrieved_value}')
+titlefontsizeA4_name = 'titlefontsizeA4'
+titlefontsizeA4_value = 38
+variable_dict[titlefontsizeA4_name] = titlefontsizeA4_value
 
 create_Fesival_pdf("PDF/Festivals_A4.pdf", A4, title="A4 Festivals")
 create_Fesival_pdf("PDF/Festivals_A3.pdf", A3, title="A3 Festivals")
