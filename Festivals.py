@@ -15,13 +15,13 @@ def create_Fesival_pdf(filename, pagesize, title="Festivals"):
         print(f'Pagesize "{pagesize}"')
         if pagesize == A3:
             titlefontsize_name = "titlefontsize" + "A3"
-            titlefontsizeA3_value = variable_dict[titlefontsize_name]
-            namewidth = pdfmetrics.stringWidth(title, festivalfont, titlefontsizeA3_value)
+            titlefontsize_value = variable_dict[titlefontsize_name]
+            namewidth = pdfmetrics.stringWidth(title, festivalfont, titlefontsize_value)
             c.setFont(festivalfont, titlefontsizeA3_value)
         if pagesize == A4:
             titlefontsize_name = "titlefontsize" + "A4"
-            titlefontsizeA4_value = variable_dict[titlefontsize_name]
-            namewidth = pdfmetrics.stringWidth(title, festivalfont, titlefontsizeA4_value)
+            titlefontsize_value = variable_dict[titlefontsize_name]
+            namewidth = pdfmetrics.stringWidth(title, festivalfont, titlefontsize_value)
             c.setFont(festivalfont, titlefontsizeA4_value)
         c.drawCentredString(width / 2, height - 50, title)
         c.setLineWidth(1)
