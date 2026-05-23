@@ -12,10 +12,11 @@ titlefontsizeA4 = 24
 
 def create_Fesival_pdf(filename, pagesize, title="Festivals"):
     variable_dict = {}
-    variable_name = 'my_variable'
+    variable_name = 'my_variableA3'
     variable_value = 42
     variable_dict[variable_name] = variable_value
-    retrieved_value = variable_dict[variable_name]
+    vv = "my_variableA3"
+    retrieved_value = variable_dict[vv]
     print(f'{variable_name}: {retrieved_value}')
     try:
         c = canvas.Canvas(filename, pagesize=pagesize)
