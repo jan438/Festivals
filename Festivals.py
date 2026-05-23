@@ -11,12 +11,6 @@ titlefontsizeA3 = 30
 titlefontsizeA4 = 24
 
 def create_Fesival_pdf(filename, pagesize, title="Festivals"):
-    variable_dict = {}
-    titlefontsizeA3_name = 'titlefontsizeA3'
-    titlefontsizeA3_value = 42
-    variable_dict[titlefontsizeA3_name] = titlefontsizeA3_value
-    retrieved_value = variable_dict[titlefontsizeA3_name]
-    print(f'{titlefontsizeA3_name}: {retrieved_value}')
     try:
         c = canvas.Canvas(filename, pagesize=pagesize)
         width, height = pagesize
@@ -46,6 +40,13 @@ pdfmetrics.registerFont(TTFont('LiberationSerif', 'LiberationSerif-Regular.ttf')
 pdfmetrics.registerFont(TTFont('LiberationSerifBold', 'LiberationSerif-Bold.ttf'))
 pdfmetrics.registerFont(TTFont('LiberationSerifItalic', 'LiberationSerif-Italic.ttf'))
 pdfmetrics.registerFont(TTFont('LiberationSerifBoldItalic', 'LiberationSerif-BoldItalic.ttf'))
+
+variable_dict = {}
+titlefontsizeA3_name = 'titlefontsizeA3'
+titlefontsizeA3_value = 42
+variable_dict[titlefontsizeA3_name] = titlefontsizeA3_value
+retrieved_value = variable_dict[titlefontsizeA3_name]
+print(f'{titlefontsizeA3_name}: {retrieved_value}')
 
 create_Fesival_pdf("PDF/Festivals_A4.pdf", A4, title="A4 Festivals")
 create_Fesival_pdf("PDF/Festivals_A3.pdf", A3, title="A3 Festivals")
