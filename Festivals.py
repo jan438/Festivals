@@ -38,11 +38,9 @@ pdfmetrics.registerFont(TTFont('LiberationSerifBoldItalic', 'LiberationSerif-Bol
 
 variable_dict = {}
 titlefontsizeA3_name = 'titlefontsizeA3'
-titlefontsizeA3_value = 42
-variable_dict[titlefontsizeA3_name] = titlefontsizeA3_value
+variable_dict[titlefontsizeA3_name] = 42
 titlefontsizeA4_name = 'titlefontsizeA4'
-titlefontsizeA4_value = 21
-variable_dict[titlefontsizeA4_name] = titlefontsizeA4_value
+variable_dict[titlefontsizeA4_name] = 21
 
 create_Fesival_pdf("PDF/Festivals_A4.pdf", "A4", A4, title="A4 Festivals")
 create_Fesival_pdf("PDF/Festivals_A3.pdf", "A3", A3, title="A3 Festivals")
