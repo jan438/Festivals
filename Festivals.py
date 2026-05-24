@@ -12,8 +12,7 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
     try:
         c = canvas.Canvas(filename, pagesize=pagesize)
         width, height = pagesize
-        titlefontsize_name = "titlefontsize" + ps
-        titlefontsize_value = variable_dict[titlefontsize_name]
+        titlefontsize_value = variable_dict["titlefontsize" + ps]
         titley_name = "titley" + ps
         titley_value = variable_dict[titley_name]
         namewidth = pdfmetrics.stringWidth(title, festivalfont, titlefontsize_value)
