@@ -14,9 +14,11 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
         width, height = pagesize
         titlefontsize_name = "titlefontsize" + ps
         titlefontsize_value = variable_dict[titlefontsize_name]
+        titley_name = "titley" + ps
+        titley_value = variable_dict[titley_name]
         namewidth = pdfmetrics.stringWidth(title, festivalfont, titlefontsize_value)
         c.setFont(festivalfont, titlefontsize_value)
-        c.drawCentredString(width / 2, height - 50, title)
+        c.drawCentredString(width / 2, height - titley_value, title)
         c.setLineWidth(1)
         c.rect(20, 20, width - 40, height - 40)
         c.showPage()
