@@ -41,6 +41,10 @@ titlefontsizeA3_name = 'titlefontsizeA3'
 variable_dict[titlefontsizeA3_name] = 42
 titlefontsizeA4_name = 'titlefontsizeA4'
 variable_dict[titlefontsizeA4_name] = 21
+titleyA3_name = 'titleyA3'
+variable_dict[titleyA3_name] = 50
+titleyA4_name = 'titleyA4'
+variable_dict[titleyA4_name] = 50
 
 create_Fesival_pdf("PDF/Festivals_A4.pdf", "A4", A4, title="A4 Festivals")
 create_Fesival_pdf("PDF/Festivals_A3.pdf", "A3", A3, title="A3 Festivals")
