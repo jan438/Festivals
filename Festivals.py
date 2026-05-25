@@ -24,18 +24,18 @@ def scaleSVG(svgfile, scaling_factor):
     drawing.scale(scaling_x, scaling_y)
     return drawing
     
-def drawRect(c, activity_x, activity_y, w, h, a, color):    
+def drawRect(c, festival_x, festival_y, w, h, a, color):    
     c.setFillColor(HexColor(color))
     p = c.beginPath()
-    p.moveTo(activity_x, activity_y + 0.5 * a)
-    p.arcTo(activity_x, activity_y, activity_x + a, activity_y + a, startAng = 180, extent = 90)  # arc left below
-    p.lineTo(activity_x + w, activity_y)                                                           # horizontal line
-    p.arcTo(activity_x + w, activity_y, activity_x + w + a, activity_y + a, startAng = 270, extent = 90)  # arc right below
-    p.lineTo(activity_x + w + a, activity_y + h)                                                      # vertcal line
-    p.arcTo(activity_x + w, activity_y + h, activity_x + w + a, activity_y + h + a, startAng = 0, extent = 90)     # arc right above
-    p.lineTo(activity_x + 0.5 * a, activity_y + h + a)                                                   # horizontal line
-    p.arcTo(activity_x, activity_y + h, activity_x + a, activity_y + h + a, startAng = 90, extent = 90)    # arc left above
-    p.lineTo(activity_x, activity_y + 0.5 * a)                                                                # vertcal line
+    p.moveTo(festival_x, festival_y + 0.5 * a)
+    p.arcTo(festival_x, festival_y, festival_x + a, festival_y + a, startAng = 180, extent = 90)
+    p.lineTo(festival_x + w, festival_y)
+    p.arcTo(festival_x + w, festival_y, festival_x + w + a, festival_y + a, startAng = 270, extent = 90)
+    p.lineTo(festival_x + w + a, festival_y + h)
+    p.arcTo(festival_x + w, festival_y + h, festival_x + w + a, festival_y + h + a, startAng = 0, extent = 90)
+    p.lineTo(festival_x + 0.5 * a, festival_y + h + a)
+    p.arcTo(festival_x, festival_y + h, festival_x + a, festival_y + h + a, startAng = 90, extent = 90)
+    p.lineTo(festival_x, festival_y + 0.5 * a)
     c.drawPath(p, stroke = 0, fill = 1)
     
 def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
