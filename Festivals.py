@@ -8,6 +8,7 @@ from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfbase.pdfmetrics import registerFontFamily
 from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 from reportlab.graphics import renderPDF
+from reportlab.lib.colors import HexColor
 
 festivalfont = "LiberationSerif"
 templatedata = []
@@ -23,6 +24,20 @@ def scaleSVG(svgfile, scaling_factor):
     drawing.scale(scaling_x, scaling_y)
     return drawing
     
+def drawRect(c, activity_x, activity_y, w, h, a, color):    
+    c.setFillColor(HexColor(color))
+    p = c.beginPath()
+    p.moveTo(activity_x, activity_y + 0.5 * a)
+    p.arcTo(activity_x, activity_y, activity_x + a, activity_y + a, startAng = 180, extent = 90)  # arc left below
+    p.lineTo(activity_x + w, activity_y)                                                           # horizontal line
+    p.arcTo(activity_x + w, activity_y, activity_x + w + a, activity_y + a, startAng = 270, extent = 90)  # arc right below
+    p.lineTo(activity_x + w + a, activity_y + h)                                                      # vertcal line
+    p.arcTo(activity_x + w, activity_y + h, activity_x + w + a, activity_y + h + a, startAng = 0, extent = 90)     # arc right above
+    p.lineTo(activity_x + 0.5 * a, activity_y + h + a)                                                   # horizontal line
+    p.arcTo(activity_x, activity_y + h, activity_x + a, activity_y + h + a, startAng = 90, extent = 90)    # arc left above
+    p.lineTo(activity_x, activity_y + 0.5 * a)                                                                # vertcal line
+    c.drawPath(p, stroke = 0, fill = 1)
+    
 def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
     try:
         c = canvas.Canvas(filename, pagesize=pagesize)
@@ -37,6 +52,7 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
         scale_value = variable_dict["scaleinfobox" + ps]
         drawing = scaleSVG('SVG/infobox.svg', float(scale_value))
         renderPDF.draw(drawing, c, 150, 475)
+        drawRect(c, 30,  40, 100, 200, 20, "#80ff84")
         c.showPage()
         c.save()
         print(f"✅ PDF Festivals '{filename}' created successfully.")
