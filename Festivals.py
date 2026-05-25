@@ -34,7 +34,8 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
         c.drawCentredString(width / 2, height - titley_value, title)
         c.setLineWidth(1)
         c.rect(20, 20, width - 40, height - 40)
-        drawing = scaleSVG('SVG/infobox.svg', 1.5)
+        scale_value = variable_dict["scaleinfobox" + ps]
+        drawing = scaleSVG('SVG/infobox.svg', float(scale_value))
         renderPDF.draw(drawing, c, 150, 475)
         c.showPage()
         c.save()
