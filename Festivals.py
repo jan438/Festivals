@@ -49,10 +49,8 @@ print(count)
 
 variable_dict = {}
 
-variable_dict['titlefontsizeA3'] = 42
-variable_dict['titlefontsizeA4'] = 21
-variable_dict['titleyA3'] = 50
-variable_dict['titleyA4'] = 40
+for i in range(len(templatedata)):
+    variable_dict[templatedata[i][0]] = float(templatedata[i][1])
 
 create_Fesival_pdf("PDF/Festivals_A4.pdf", "A4", A4, title="A4 Festivals")
 create_Fesival_pdf("PDF/Festivals_A3.pdf", "A3", A3, title="A3 Festivals")
