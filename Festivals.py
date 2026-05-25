@@ -1,12 +1,14 @@
 from reportlab.lib.pagesizes import A3, A4
 from reportlab.pdfgen import canvas
 import os
+import csv
 import sys
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfbase.pdfmetrics import registerFontFamily
 
 festivalfont = "LiberationSerif"
+templatedata = []
 
 def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
     try:
@@ -36,7 +38,17 @@ pdfmetrics.registerFont(TTFont('LiberationSerifBold', 'LiberationSerif-Bold.ttf'
 pdfmetrics.registerFont(TTFont('LiberationSerifItalic', 'LiberationSerif-Italic.ttf'))
 pdfmetrics.registerFont(TTFont('LiberationSerifBoldItalic', 'LiberationSerif-BoldItalic.ttf'))
 
+file_to_open = "Data/template.csv"
+with open(file_to_open, 'r') as file:
+    csvreader = csv.reader(file, delimiter = ';')
+    count = 0
+    for row in csvreader:
+        templatedata.append(row)
+        count += 1
+print(count)
+
 variable_dict = {}
+
 variable_dict['titlefontsizeA3'] = 42
 variable_dict['titlefontsizeA4'] = 21
 variable_dict['titleyA3'] = 50
