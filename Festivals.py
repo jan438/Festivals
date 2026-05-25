@@ -9,7 +9,6 @@ from reportlab.pdfbase.pdfmetrics import registerFontFamily
 festivalfont = "LiberationSerif"
 
 def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
-    print(locals())
     try:
         c = canvas.Canvas(filename, pagesize=pagesize)
         width, height = pagesize
