@@ -51,6 +51,9 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
     try:
         c = canvas.Canvas(filename, pagesize=pagesize)
         width, height = pagesize
+        c.setFillColor(HexColor('#FECDE5'))
+        c.rect(0, 0, width, height, fill=1)
+        c.setFillColor(HexColor('#000000'))
         cadre(c, pagesize)
         titlefontsize_value = variable_dict["titlefontsize" + ps]
         titley_value = variable_dict["titley" + ps]
