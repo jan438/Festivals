@@ -38,10 +38,14 @@ def drawRect(c, x, y, w, h, a, color):
     p.lineTo(x, y + 0.5 * a)
     c.drawPath(p, stroke = 0, fill = 1)
     
+def cadre(c, pagesize):
+    print("Cadre", pagesize)
+    
 def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
     try:
         c = canvas.Canvas(filename, pagesize=pagesize)
         width, height = pagesize
+        cadre(c, pagesize)
         titlefontsize_value = variable_dict["titlefontsize" + ps]
         titley_value = variable_dict["titley" + ps]
         namewidth = pdfmetrics.stringWidth(title, festivalfont, titlefontsize_value)
