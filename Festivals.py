@@ -41,7 +41,7 @@ def drawRect(c, x, y, w, h, a, color):
 def cadre(c, pagesize):
     width = pagesize[0]
     height = pagesize[1]
-    c.line(50,50,50,500) # vertical line
+    c.line(350,0,350,height) # vertical line
     c.line(250,0,250,height) # vertical line
     c.line(50,50,500,50) # horizontal line
 
