@@ -41,8 +41,9 @@ def drawRect(c, x, y, w, h, a, color):
 def cadre(c, pagesize):
     width = pagesize[0]
     height = pagesize[1]
-    print("Cadre", width, height)
-    
+    c.line(50,50,50,500) # vertical line
+    c.line(50,50,500,50) # horizontal line
+
 def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
     try:
         c = canvas.Canvas(filename, pagesize=pagesize)
