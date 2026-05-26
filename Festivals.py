@@ -24,7 +24,7 @@ def scaleSVG(svgfile, scaling_factor):
     drawing.scale(scaling_x, scaling_y)
     return drawing
     
-def drawRect(c, x, y, w, h, a, color):    
+def drawrrrrRect(c, x, y, w, h, a, color):    
     c.setFillColor(HexColor(color))
     p = c.beginPath()
     p.moveTo(x, y + 0.5 * a)
@@ -65,7 +65,7 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
         scale_value = variable_dict["scaleinfobox" + ps]
         drawing = scaleSVG('SVG/infobox.svg', float(scale_value))
         renderPDF.draw(drawing, c, 150, 475)
-        drawRect(c, 30,  40, 100, 200, 20, "#80ff84")
+        drawrrrrRect(c, 30,  40, 100, 200, 20, "#80ff84")
         c.showPage()
         c.save()
         print(f"✅ PDF Festivals '{filename}' created successfully.")
