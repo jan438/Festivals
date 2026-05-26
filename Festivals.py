@@ -24,18 +24,18 @@ def scaleSVG(svgfile, scaling_factor):
     drawing.scale(scaling_x, scaling_y)
     return drawing
     
-def drawRect(c, festival_x, festival_y, w, h, a, color):    
+def drawRect(c, x, y, w, h, a, color):    
     c.setFillColor(HexColor(color))
     p = c.beginPath()
-    p.moveTo(festival_x, festival_y + 0.5 * a)
-    p.arcTo(festival_x, festival_y, festival_x + a, festival_y + a, startAng = 180, extent = 90)
-    p.lineTo(festival_x + w, festival_y)
-    p.arcTo(festival_x + w, festival_y, festival_x + w + a, festival_y + a, startAng = 270, extent = 90)
-    p.lineTo(festival_x + w + a, festival_y + h)
-    p.arcTo(festival_x + w, festival_y + h, festival_x + w + a, festival_y + h + a, startAng = 0, extent = 90)
-    p.lineTo(festival_x + 0.5 * a, festival_y + h + a)
-    p.arcTo(festival_x, festival_y + h, festival_x + a, festival_y + h + a, startAng = 90, extent = 90)
-    p.lineTo(festival_x, festival_y + 0.5 * a)
+    p.moveTo(x, y + 0.5 * a)
+    p.arcTo(x, y, x + a, y + a, startAng = 180, extent = 90)
+    p.lineTo(x + w, y)
+    p.arcTo(x + w, y, x + w + a, y + a, startAng = 270, extent = 90)
+    p.lineTo(x + w + a, y + h)
+    p.arcTo(x + w, y + h, x + w + a, y + h + a, startAng = 0, extent = 90)
+    p.lineTo(x + 0.5 * a, y + h + a)
+    p.arcTo(x, y + h, x + a, y + h + a, startAng = 90, extent = 90)
+    p.lineTo(x, y + 0.5 * a)
     c.drawPath(p, stroke = 0, fill = 1)
     
 def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
