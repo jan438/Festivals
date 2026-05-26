@@ -54,12 +54,12 @@ def drawhhrrRect(c, x, y, w, h, a, color):
     c.setFillColor(HexColor(color))
     p = c.beginPath()
     p.moveTo(x, y)
-    p.lineTo(x + w, y) #first horizontal
+    p.lineTo(x + w, y)
     p.arcTo(x + w, y, x + w + a, y + a, startAng = 270, extent = 90)
-    p.lineTo(x + w + a, y + h) #secont vertical
+    p.lineTo(x + w + a, y + h)
     p.arcTo(x + w, y + h, x + w + a, y + h + a, startAng = 0, extent = 90)
-    p.lineTo(x, y + h + a) #second horizontal
-    p.lineTo(x, y) #first vertical
+    p.lineTo(x, y + h + a)
+    p.lineTo(x, y)
     c.drawPath(p, stroke = 0, fill = 1)
     
 def cadre(c, pagesize):
