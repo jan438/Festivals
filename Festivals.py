@@ -44,7 +44,7 @@ def cadre(c, pagesize):
     dx = width / 10
     for i in range(11):
         c.line(i * dx, 0, i * dx, height) # vertical line
-    for i in range(11):
+    for i in range(15):
         c.line(0, i * dx, width, i * dx)  # horizontal line
         
 def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
