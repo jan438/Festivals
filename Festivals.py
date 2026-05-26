@@ -52,7 +52,7 @@ def drawrrhhRect(c, x, y, w, h, a, color):
     p.lineTo(x, y + 0.5 * a)
     c.drawPath(p, stroke = 0, fill = 1)
     
-def drawrrhhRect(c, x, y, w, h, a, color):    
+def drawhhrrRect(c, x, y, w, h, a, color):    
     c.setFillColor(HexColor(color))
     p = c.beginPath()
     p.moveTo(x, y + 0.5 * a)
@@ -94,7 +94,8 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
         drawing = scaleSVG('SVG/infobox.svg', float(scale_value))
         renderPDF.draw(drawing, c, 150, 475)
         drawrrrrRect(c, 30,  40, 100, 200, 20, "#80ff84")
-        drawrrrrRect(c, 430,  40, 100, 200, 20, "#80ff84")
+        drawrrhhRect(c, 230,  40, 100, 200, 20, "#80ff84")
+        drawhhrrRect(c, 430,  40, 100, 200, 20, "#80ff84")
         c.showPage()
         c.save()
         print(f"✅ PDF Festivals '{filename}' created successfully.")
