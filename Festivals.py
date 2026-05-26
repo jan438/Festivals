@@ -90,9 +90,9 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
         drawing = scaleSVG('SVG/infobox.svg', float(scale_value))
         renderPDF.draw(drawing, c, 150, 475)
         dy = width / 10
-        drawrrrrRect(c,  30,  dy, 100, 200, 20, "#80ff84")
-        drawrrhhRect(c, 230,  dy, 100, 200, 20, "#80ff84")
-        drawhhrrRect(c, 430,  dy, 100, 200, 20, "#80ff84")
+        drawrrrrRect(c,  30,  dy, 100, 200, 50, "#80ff84")
+        drawrrhhRect(c, 230,  dy, 100, 200, 50, "#80ff84")
+        drawhhrrRect(c, 430,  dy, 100, 200, 50, "#80ff84")
         c.showPage()
         c.save()
         print(f"✅ PDF Festivals '{filename}' created successfully.")
