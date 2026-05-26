@@ -39,7 +39,9 @@ def drawRect(c, x, y, w, h, a, color):
     c.drawPath(p, stroke = 0, fill = 1)
     
 def cadre(c, pagesize):
-    print("Cadre", pagesize)
+    width = pagesize[0]
+    height = pagesize[1]
+    print("Cadre", width, height)
     
 def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
     try:
