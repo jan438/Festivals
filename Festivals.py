@@ -42,11 +42,11 @@ def cadre(c, pagesize):
     width = pagesize[0]
     height = pagesize[1]
     dx = width / 10
-    c.line(0,250,width,250) # horizontal line
-    c.line(0,350,width,350) # horizontal line
     for i in range(11):
         c.line(i * dx, 0, i * dx, height) # vertical line
-    
+    for i in range(11):
+        c.line(0, i * dx, width, i * dx)  # horizontal line
+        
 def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
     try:
         c = canvas.Canvas(filename, pagesize=pagesize)
