@@ -40,18 +40,6 @@ def drawallroundRect(c, x, y, w, h, a, color):
     p.lineTo(x, y + 0.5 * a)
     c.drawPath(p, stroke = 0, fill = 1)
     
-def drawleftroundRect(c, x, y, w, h, a, color):    
-    c.setFillColor(HexColor(color))
-    p = c.beginPath()
-    p.moveTo(x, y + 0.5 * a)
-    p.arcTo(x, y, x + a, y + a, startAng = 180, extent = 90)
-    p.lineTo(x + w, y)
-    p.lineTo(x + w + a, y + h)
-    p.lineTo(x + 0.5 * a, y + h + a)
-    p.arcTo(x, y + h, x + a, y + h + a, startAng = 90, extent = 90)
-    p.lineTo(x, y + 0.5 * a)
-    c.drawPath(p, stroke = 0, fill = 1)
-    
 def cadre(c, pagesize):
     width = pagesize[0]
     height = pagesize[1]
@@ -108,7 +96,6 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
         renderPDF.draw(drawing, c, 150, 475)
         dy = width / 10
         drawallroundRect(c,  30,  dy, 100, 200, 50, "#80ff84")
-        drawleftroundRect(c,  230,  dy, 100, 200, 50, "#80ff84")
         penciltip(c, 10, 50, True)
         c.showPage()
         c.save()
