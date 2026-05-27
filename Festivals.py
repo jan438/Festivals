@@ -26,7 +26,7 @@ def scaleSVG(svgfile, scaling_factor):
     drawing.scale(scaling_x, scaling_y)
     return drawing
     
-def drawrrrrRect(c, x, y, w, h, a, color):    
+def drawarRect(c, x, y, w, h, a, color):    
     c.setFillColor(HexColor(color))
     p = c.beginPath()
     p.moveTo(x, y + 0.5 * a)
@@ -40,7 +40,7 @@ def drawrrrrRect(c, x, y, w, h, a, color):
     p.lineTo(x, y + 0.5 * a)
     c.drawPath(p, stroke = 0, fill = 1)
     
-def drawrrhhRect(c, x, y, w, h, a, color):    
+def drawrrRect(c, x, y, w, h, a, color):    
     c.setFillColor(HexColor(color))
     p = c.beginPath()
     p.moveTo(x, y + 0.5 * a)
@@ -52,7 +52,7 @@ def drawrrhhRect(c, x, y, w, h, a, color):
     p.lineTo(x, y + 0.5 * a)
     c.drawPath(p, stroke = 0, fill = 1)
     
-def drawhhrrRect(c, x, y, w, h, a, color):    
+def drawlrRect(c, x, y, w, h, a, color):    
     c.setFillColor(HexColor(color))
     p = c.beginPath()
     p.moveTo(x, y)
@@ -119,9 +119,9 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
         drawing = scaleSVG('SVG/infobox.svg', float(scale_value))
         renderPDF.draw(drawing, c, 150, 475)
         dy = width / 10
-        drawrrrrRect(c,  30,  dy, 100, 200, 50, "#80ff84")
-        drawrrhhRect(c, 230,  dy, 100, 200, 50, "#80ff84")
-        drawhhrrRect(c, 430,  dy, 100, 200, 50, "#80ff84")
+        drawarRect(c,  30,  dy, 100, 200, 50, "#80ff84")
+        drawrrRect(c, 230,  dy, 100, 200, 50, "#80ff84")
+        drawlrRect(c, 430,  dy, 100, 200, 50, "#80ff84")
         penciltip(c, True)
         c.showPage()
         c.save()
