@@ -75,6 +75,18 @@ def drawtrRect(c, x, y, w, h, a, color):
     p.arcTo(x, y + h, x + a, y + h + a, startAng = 90, extent = 90)
     p.lineTo(x, y + 0.5 * a)
     c.drawPath(p, stroke = 0, fill = 1)    
+
+def drawbrRect(c, x, y, w, h, a, color):    
+    c.setFillColor(HexColor(color))
+    p = c.beginPath()
+    p.moveTo(x, y + 0.5 * a)
+    p.arcTo(x, y, x + a, y + a, startAng = 180, extent = 90)
+    p.lineTo(x + w, y)
+    p.arcTo(x + w, y, x + w + a, y + a, startAng = 270, extent = 90)
+    p.lineTo(x + w + a, y + h)
+    p.lineTo(x + 0.5 * a, y + h + a)
+    p.lineTo(x, y + 0.5 * a)
+    c.drawPath(p, stroke = 0, fill = 1)
     
 def cadre(c, pagesize):
     width = pagesize[0]
@@ -135,6 +147,7 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
         drawrrRect(c, 230,  dy, 100, 200, 50, "#80ff84")
         drawlrRect(c, 430,  dy, 100, 200, 50, "#80ff84")
         drawtrRect(c, 230,  400, 100, 200, 50, "#80ff84")
+        drawbrRect(c, 430,  400, 100, 200, 50, "#80ff84")
         penciltip(c, True)
         c.showPage()
         c.save()
