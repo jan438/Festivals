@@ -68,7 +68,7 @@ def drawtrRect(c, x, y, w, h, a, color):
     c.setFillColor(HexColor(color))
     p = c.beginPath()
     p.moveTo(x, y)
-    p.lineTo(x + w, y)
+    p.lineTo(x + w + a, y)
     p.lineTo(x + w + a, y + h)
     p.arcTo(x + w, y + h, x + w + a, y + h + a, startAng = 0, extent = 90)
     p.lineTo(x + 0.5 * a, y + h + a)
