@@ -97,7 +97,7 @@ def cadre(c, pagesize):
     for i in range(15):
         c.line(0, i * dx, width, i * dx)
 
-def penciltip(c, debug=1):
+def penciltip(c, x, y, debug=1):
     u = inch/10.0
     c.setLineWidth(4)
     if debug:
@@ -106,23 +106,23 @@ def penciltip(c, debug=1):
     c.setStrokeColor(black)
     c.setFillColor(tan)
     p = c.beginPath()
-    p.moveTo(10*u,0)
-    p.lineTo(0,5*u)
-    p.lineTo(10*u,10*u)
-    p.curveTo(11.5*u,10*u, 11.5*u,7.5*u, 10*u,7.5*u)
-    p.curveTo(12*u,7.5*u, 11*u,2.5*u, 9.7*u,2.5*u)
-    p.curveTo(10.5*u,2.5*u, 11*u,0, 10*u,0)
+    p.moveTo(x+10*u,y)
+    p.lineTo(x,y+5*u)
+    p.lineTo(x+10*u,y+10*u)
+    p.curveTo(x+11.5*u,y+10*u, x+11.5*u,y+7.5*u, x+10*u,y+7.5*u)
+    p.curveTo(x+12*u,y+7.5*u, x+11*u,y+2.5*u, x+9.7*u,y+2.5*u)
+    p.curveTo(x+10.5*u,y+2.5*u, x+11*u,y, x+10*u,y)
     c.drawPath(p, stroke=1, fill=1)
     c.setFillColor(black)
     p = c.beginPath()
-    p.moveTo(0,5*u)
-    p.lineTo(4*u,3*u)
-    p.lineTo(5*u,4.5*u)
-    p.lineTo(3*u,6.5*u)
+    p.moveTo(x,y+5*u)
+    p.lineTo(x+4*u,y+3*u)
+    p.lineTo(x+5*u,y+4.5*u)
+    p.lineTo(x+3*u,y+6.5*u)
     c.drawPath(p, stroke=1, fill=1)
     if debug:
         c.setStrokeColor(green) # put in a frame of reference
-        c.grid([0,5*u,10*u,15*u], [0,5*u,10*u])
+        c.grid([x,x+5*u,x+10*u,x+15*u], [y,y+5*u,y+10*u])
         
 def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
     try:
@@ -148,7 +148,7 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
         drawleftroundRect(c, 430,  dy, 100, 200, 50, "#80ff84")
         drawtoproundRect(c, 230,  6*dy, 100, 200, 50, "#80ff84")
         drawbottomroundRect(c, 430,  6*dy, 100, 200, 50, "#80ff84")
-        penciltip(c, True)
+        penciltip(c, 10, 50, True)
         c.showPage()
         c.save()
         print(f"✅ PDF Festivals '{filename}' created successfully.")
