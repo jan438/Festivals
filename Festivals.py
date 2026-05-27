@@ -10,7 +10,7 @@ from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 from reportlab.graphics import renderPDF
 from reportlab.lib.colors import HexColor
 from reportlab.lib.colors import tan, black, green
-from reportlab.lib.units import inch
+from reportlab.lib.units import inch, cm, mm
 
 festivalfont = "LiberationSerif"
 templatedata = []
@@ -98,7 +98,7 @@ def cadre(c, pagesize):
         c.line(0, i * dx, width, i * dx)
 
 def penciltip(c, x, y, debug=1):
-    u = inch/10.0
+    u = cm/10.0
     c.setLineWidth(4)
     if debug:
         c.scale(2.8,2.8) # make it big
