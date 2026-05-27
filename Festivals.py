@@ -40,7 +40,7 @@ def drawallroundRect(c, x, y, w, h, a, color):
     p.lineTo(x, y + 0.5 * a)
     c.drawPath(p, stroke = 0, fill = 1)
     
-def drawrightroundRect(c, x, y, w, h, a, color):    
+def drawleftroundRect(c, x, y, w, h, a, color):    
     c.setFillColor(HexColor(color))
     p = c.beginPath()
     p.moveTo(x, y + 0.5 * a)
@@ -52,7 +52,7 @@ def drawrightroundRect(c, x, y, w, h, a, color):
     p.lineTo(x, y + 0.5 * a)
     c.drawPath(p, stroke = 0, fill = 1)
     
-def drawleftroundRect(c, x, y, w, h, a, color):    
+def drawrightroundRect(c, x, y, w, h, a, color):    
     c.setFillColor(HexColor(color))
     p = c.beginPath()
     p.moveTo(x, y)
@@ -144,8 +144,8 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
         renderPDF.draw(drawing, c, 150, 475)
         dy = width / 10
         drawallroundRect(c,  30,  dy, 100, 200, 50, "#80ff84")
-        drawrightroundRect(c, 230,  dy, 100, 200, 50, "#80ff84")
-        drawleftroundRect(c, 430,  dy, 100, 200, 50, "#80ff84")
+        drawleftroundRect(c, 230,  dy, 100, 200, 50, "#80ff84")
+        drawrightroundRect(c, 430,  dy, 100, 200, 50, "#80ff84")
         drawtoproundRect(c, 230,  6*dy, 100, 200, 50, "#80ff84")
         drawbottomroundRect(c, 430,  6*dy, 100, 200, 50, "#80ff84")
         penciltip(c, 10, 50, True)
