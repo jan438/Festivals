@@ -95,7 +95,7 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
         drawing = scaleSVG('SVG/infobox.svg', float(scale_value))
         renderPDF.draw(drawing, c, 150, 475)
         dy = width / 10
-        drawallroundRect(c,  30,  dy, 100, 200, 50, "#80ff84")
+        drawallroundRect(c,  30,  dy, 1, 1, 50, "#80ff84")
         penciltip(c, 10, 50, True)
         c.showPage()
         c.save()
