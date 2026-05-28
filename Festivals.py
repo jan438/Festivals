@@ -147,7 +147,7 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
         drawrightroundRect(c,  230,  dy, 1, 40, 50, "#80ff84")
         drawleftroundRect(c,  430,  dy, 1, 40, 50, "#80ff84")
         drawtoproundRect(c,  230,  3 * dy, 40, 1, 50, "#80ff84")
-        drawbottomroundRect(c,  430,  3 * dy, 40, 40, 50, "#80ff84")
+        drawbottomroundRect(c,  430,  3 * dy, 40, 1, 50, "#80ff84")
         penciltip(c, 10, 50, True)
         c.showPage()
         c.save()
