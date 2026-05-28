@@ -48,7 +48,7 @@ def drawrightroundRect(c, x, y, w, h, a, color):
     p.arcTo(x + w, y, x + w + a, y + a, startAng = 270, extent = 90)
     p.lineTo(x + w + a, y + h)
     p.arcTo(x + w, y + h, x + w + a, y + h + a, startAng = 0, extent = 90)
-    p.lineTo(x + 0.5 * a, y + h + a)
+    p.lineTo(x, y + h + a)
     p.lineTo(x, y + 0.5 * a)
     c.drawPath(p, stroke = 0, fill = 1)
     
