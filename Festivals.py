@@ -119,6 +119,17 @@ def hexagon(c, xcenter, ycenter):
     p.close()
     c.drawPath(p)
     
+def octagon(c, xcenter, ycenter):
+    c.setFont(festivalfont, 10)
+    radius=inch/3.0
+    p = c.beginPath()
+    p.moveTo(xcenter,ycenter+radius)
+    angle = (2*pi)*2/5.0
+    startangle = pi/2.0
+    p.lineTo(xcenter + 0.5 * radius, ycenter - 0.5 * radius)
+    p.close()
+    c.drawPath(p)
+    
 def cadre(c, pagesize):
     width = pagesize[0]
     height = pagesize[1]
@@ -182,6 +193,7 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
         penciltip(c, 10, 50, True)
         star(c, title="Title", aka="Comment", xcenter=50, ycenter=130, nvertices=5)
         hexagon(c, xcenter=100, ycenter=130)
+        octagon(c, xcenter=150, ycenter=130)
         c.showPage()
         c.save()
         print(f"✅ PDF Festivals '{filename}' created successfully.")
