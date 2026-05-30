@@ -104,9 +104,9 @@ def star(c, title="Title Here", aka="Comment here.", xcenter=None, ycenter=None,
         x = xcenter + radius*cos(nextangle)
         y = ycenter + radius*sin(nextangle)
         p.lineTo(x,y)
-        if nvertices==5:
-            p.close()
-        c.drawPath(p)
+    if nvertices==5:
+        p.close()
+    c.drawPath(p)
     
 def cadre(c, pagesize):
     width = pagesize[0]
