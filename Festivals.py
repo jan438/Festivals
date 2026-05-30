@@ -12,6 +12,7 @@ from reportlab.lib.colors import HexColor
 from reportlab.lib.colors import tan, black, green
 from reportlab.lib.units import inch, cm, mm
 from math import pi
+from math import pi, cos, sin
 
 festivalfont = "LiberationSerif"
 templatedata = []
@@ -92,13 +93,10 @@ def drawbottomroundRect(c, x, y, w, h, a, color):
 def star(c, title="Title Here", aka="Comment here.", xcenter=None, ycenter=None, nvertices=5):
     c.setFont(festivalfont, 10)
     radius=inch/3.0
-    if xcenter is None: xcenter=2.75*inch
-    if ycenter is None: ycenter=1.5*inch
     c.drawCentredString(xcenter, ycenter+1.3*radius, title)
     c.drawCentredString(xcenter, ycenter-1.4*radius, aka)
     p = c.beginPath()
     p.moveTo(xcenter,ycenter+radius)
-    from math import pi, cos, sin
     angle = (2*pi)*2/5.0
     startangle = pi/2.0
     for vertex in range(nvertices-1):
@@ -171,7 +169,7 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
         drawtoproundRect(c,  230,  3 * dy, 40, 1, 50, "#80ff84")
         drawbottomroundRect(c,  430,  3 * dy, 40, 1, 50, "#80ff84")
         penciltip(c, 10, 50, True)
-        star(c, xcenter=150, nvertices=5)
+        star(c, xcenter=150, ycenter=200, nvertices=5)
         c.showPage()
         c.save()
         print(f"✅ PDF Festivals '{filename}' created successfully.")
