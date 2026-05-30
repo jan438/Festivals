@@ -34,8 +34,6 @@ if sys.platform[0] == 'w':
 os.chdir(path)
 c = Canvas("PDF/Exercise.pdf", pagesize=letter)
 drawRoundedRect(c, 11*cm,  12*cm, 50, 50, 20, 'd', "#da23ff", "#99ff99", "#9869ff")
-drawRoundedRect(c, 11*cm,  15*cm, 50, 50, 20, 'h', "#da23ff", "#99ff99", "#9869ff")
-drawRoundedRect(c, 11*cm,  18*cm, 50, 50, 20, 'v', "#da23ff", "#99ff99", "#9869ff")
 red50transparent = Color( 100, 0, 0, alpha=0.5)
 c.setFillColor(red50transparent)
 c.rect(300,75,100,100, fill=True, stroke=False)
