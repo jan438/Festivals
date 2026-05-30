@@ -110,7 +110,7 @@ def star(c, title, aka, xcenter, ycenter, nvertices):
     
 def hexagon(c, xcenter, ycenter):
     c.setFont(festivalfont, 10)
-    radius=inch/3.0
+    radius=10
     p = c.beginPath()
     p.moveTo(xcenter,ycenter+radius)
     angle = (2*pi)*2/5.0
@@ -121,7 +121,7 @@ def hexagon(c, xcenter, ycenter):
     
 def octagon(c, xcenter, ycenter):
     c.setFont(festivalfont, 10)
-    radius=inch/3.0
+    radius=10
     p = c.beginPath()
     p.moveTo(xcenter,ycenter+radius)
     angle = (2*pi)*2/5.0
