@@ -19,7 +19,7 @@ p.gca().add_artist(circle)
 plt.savefig('PDF/test_donut.png')
 plt.show()
 
-my_canvas = canvas.Canvas("PDF/Test_Rapport.pdf",pagesize=(landscape(A4)),bottomup=0)
+my_canvas = canvas.Canvas("PDF/Test_Rapport1.pdf",pagesize=(landscape(A4)),bottomup=0)
 my_canvas.drawImage(ImageReader('PDF/test_donut.png'), 300, 150, width=200, height=150)
 my_canvas.save()
 

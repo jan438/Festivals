@@ -6,7 +6,7 @@ from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import letter, landscape, A4
 from reportlab.lib.utils import ImageReader
 
-my_canvas = canvas.Canvas("PDF/Test_Rapport.pdf",pagesize=(landscape(A4)),bottomup=0)
+my_canvas = canvas.Canvas("PDF/Test_Rapport2.pdf",pagesize=(landscape(A4)),bottomup=0)
 
 my_canvas.saveState()
 my_canvas.scale(1,-1)
