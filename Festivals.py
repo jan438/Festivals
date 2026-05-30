@@ -108,25 +108,21 @@ def star(c, title, aka, xcenter, ycenter, nvertices):
         p.close()
     c.drawPath(p)
     
-def hexagon(c, xcenter, ycenter):
-    c.setFont(festivalfont, 10)
-    radius=10
+def hexagon(c, x, y, s):
     p = c.beginPath()
-    p.moveTo(xcenter,ycenter+radius)
-    angle = (2*pi)*2/5.0
-    startangle = pi/2.0
-    p.lineTo(xcenter + 0.5 * radius, ycenter - 0.5 * radius)
+    p.moveTo(x, y)
+    dx = 0.5 * s
+    dy = 0.5 * s
+    p.lineTo(x + dx, y + dy)
     p.close()
     c.drawPath(p)
     
-def octagon(c, xcenter, ycenter):
-    c.setFont(festivalfont, 10)
-    radius=10
+def octagon(c, x, y, s):
     p = c.beginPath()
-    p.moveTo(xcenter,ycenter+radius)
-    angle = (2*pi)*2/5.0
-    startangle = pi/2.0
-    p.lineTo(xcenter + 0.5 * radius, ycenter - 0.5 * radius)
+    p.moveTo(x, y)
+    dx = 0.5 * s
+    dy = 0.5 * s
+    p.lineTo(x + dx, y + dy)
     p.close()
     c.drawPath(p)
     
@@ -192,8 +188,8 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
         drawbottomroundRect(c,  430,  3 * dy, 40, 1, 50, "#80ff84")
         penciltip(c, 10, 50, True)
         star(c, title="Title", aka="Comment", xcenter=50, ycenter=130, nvertices=5)
-        hexagon(c, xcenter=100, ycenter=130)
-        octagon(c, xcenter=150, ycenter=130)
+        hexagon(c, x=100, y=130, s=10)
+        octagon(c, x=150, y=130, s=10)
         c.showPage()
         c.save()
         print(f"✅ PDF Festivals '{filename}' created successfully.")
