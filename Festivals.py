@@ -11,6 +11,7 @@ from reportlab.graphics import renderPDF
 from reportlab.lib.colors import HexColor
 from reportlab.lib.colors import tan, black, green
 from reportlab.lib.units import inch, cm, mm
+from math import pi
 
 festivalfont = "LiberationSerif"
 templatedata = []
@@ -89,8 +90,7 @@ def drawbottomroundRect(c, x, y, w, h, a, color):
     c.drawPath(p, stroke = 0, fill = 1)
     
 def star(c, title="Title Here", aka="Comment here.", xcenter=None, ycenter=None, nvertices=5):
-    from math import pi
-    from reportlab.lib.units import inch
+    c.setFont(festivalfont, 10)
     radius=inch/3.0
     if xcenter is None: xcenter=2.75*inch
     if ycenter is None: ycenter=1.5*inch
