@@ -111,8 +111,6 @@ def star(c, title, aka, xcenter, ycenter, nvertices):
 def hexagon(c, xcenter, ycenter):
     c.setFont(festivalfont, 10)
     radius=inch/3.0
-    c.drawCentredString(xcenter, ycenter+1.3*radius, title)
-    c.drawCentredString(xcenter, ycenter-1.4*radius, aka)
     p = c.beginPath()
     p.moveTo(xcenter,ycenter+radius)
     angle = (2*pi)*2/5.0
@@ -182,7 +180,8 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
         drawtoproundRect(c,  230,  3 * dy, 40, 1, 50, "#80ff84")
         drawbottomroundRect(c,  430,  3 * dy, 40, 1, 50, "#80ff84")
         penciltip(c, 10, 50, True)
-        star(c, title="Title", aka="Comment", xcenter=100, ycenter=130, nvertices=5)
+        star(c, title="Title", aka="Comment", xcenter=50, ycenter=130, nvertices=5)
+        hexagon(c, xcenter=100, ycenter=130)
         c.showPage()
         c.save()
         print(f"✅ PDF Festivals '{filename}' created successfully.")
