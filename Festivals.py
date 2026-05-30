@@ -110,18 +110,20 @@ def star(c, title, aka, xcenter, ycenter, nvertices):
     
 def hexagon(c, x, y, s):
     p = c.beginPath()
+    startangle = 0
     p.moveTo(x, y)
-    dx = 0.5 * s
-    dy = 0.5 * s
+    dx = s * cos(startangle)
+    dy = s * sin(startangle)
     p.lineTo(x + dx, y + dy)
     p.close()
     c.drawPath(p)
     
 def octagon(c, x, y, s):
     p = c.beginPath()
+    startangle = 0
     p.moveTo(x, y)
-    dx = 0.5 * s
-    dy = 0.5 * s
+    dx = s * cos(startangle)
+    dy = s * sin(startangle)
     p.lineTo(x + dx, y + dy)
     p.close()
     c.drawPath(p)
