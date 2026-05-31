@@ -133,9 +133,8 @@ def octagon(c, x, y, s):
     p = c.beginPath()
     p.moveTo(x, y)
     #dx = s * cos(angle1)
-    #dy = s * sin(angle2)
     dx = 11.4805
-    dy = 27.71639
+    dy = s * sin(radians(angle1))
     p.lineTo(x + dx, y + dy)
     p.close()
     c.drawPath(p)
