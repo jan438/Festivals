@@ -121,15 +121,21 @@ def hexagon(c, x, y, s):
     c.drawPath(p)
     
 def octagon(c, x, y, s):
+#Given c=30 and ∠α=67.5°,
+#a = 27.71639
+#b = 11.4805
+#∠β = 22.5° = 22°30'0" = 0.3927 rad = π/8
+#h = 10.6066 = 15√2/2
     c.setFont(festivalfont, 7)
     c.drawCentredString(x, y, "Octagon")
-    angle = 30
-    print(str(angle), "sin", sin(radians(angle)), "cos", cos(radians(angle)))
+    angle1 = 67.5
+    angle2 = 22.5
     p = c.beginPath()
-    startangle = 0
     p.moveTo(x, y)
-    dx = s * cos(startangle)
-    dy = s * sin(startangle)
+    #dx = s * cos(angle1)
+    #dy = s * sin(angle2)
+    dx = 11.4805
+    dy = 27.71639
     p.lineTo(x + dx, y + dy)
     p.close()
     c.drawPath(p)
@@ -196,8 +202,8 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
         drawbottomroundRect(c,  430,  3 * dy, 40, 1, 50, "#80ff84")
         penciltip(c, 10, 50, True)
         star(c, title="Title", aka="Comment", xcenter=50, ycenter=130, nvertices=5)
-        hexagon(c, x=100, y=130, s=10)
-        octagon(c, x=150, y=130, s=10)
+        hexagon(c, x=100, y=130, s=30)
+        octagon(c, x=150, y=130, s=30)
         c.showPage()
         c.save()
         print(f"✅ PDF Festivals '{filename}' created successfully.")
