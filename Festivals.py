@@ -109,6 +109,8 @@ def star(c, title, aka, xcenter, ycenter, nvertices):
     c.drawPath(p)
     
 def hexagon(c, x, y, s):
+    c.setFont(festivalfont, 7)
+    c.drawCentredString(x, y, "Hexagon")
     p = c.beginPath()
     startangle = 0
     p.moveTo(x, y)
@@ -119,6 +121,8 @@ def hexagon(c, x, y, s):
     c.drawPath(p)
     
 def octagon(c, x, y, s):
+    c.setFont(festivalfont, 7)
+    c.drawCentredString(x, y, "Octagon")
     p = c.beginPath()
     startangle = 0
     p.moveTo(x, y)
