@@ -123,7 +123,8 @@ def hexagon(c, x, y, s):
 def octagon(c, x, y, s):
     c.setFont(festivalfont, 7)
     c.drawCentredString(x, y, "Octagon")
-    print("sin 67.5", sin(67.5), "cos 67.5", cos(67.5))
+    angle = 90
+    print(str(angle), "sin", sin(angle), "cos", cos(angle))
     p = c.beginPath()
     startangle = 0
     p.moveTo(x, y)
