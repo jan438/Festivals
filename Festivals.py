@@ -12,7 +12,7 @@ from reportlab.lib.colors import HexColor
 from reportlab.lib.colors import tan, black, green
 from reportlab.lib.units import inch, cm, mm
 from math import pi
-from math import pi, cos, sin
+from math import pi, cos, sin, radians
 
 festivalfont = "LiberationSerif"
 templatedata = []
@@ -123,8 +123,8 @@ def hexagon(c, x, y, s):
 def octagon(c, x, y, s):
     c.setFont(festivalfont, 7)
     c.drawCentredString(x, y, "Octagon")
-    angle = 90
-    print(str(angle), "sin", sin(angle), "cos", cos(angle))
+    angle = 30
+    print(str(angle), "sin", sin(radians(angle)), "cos", cos(radians(angle)))
     p = c.beginPath()
     startangle = 0
     p.moveTo(x, y)
