@@ -121,19 +121,12 @@ def hexagon(c, x, y, s):
     c.drawPath(p)
     
 def octagon(c, x, y, s):
-#Given c=30 and ∠α=67.5°,
-#a = 27.71639
-#b = 11.4805
-#∠β = 22.5° = 22°30'0" = 0.3927 rad = π/8
-#h = 10.6066 = 15√2/2
     c.setFont(festivalfont, 7)
     c.drawCentredString(x, y, "Octagon")
-    angle1 = 67.5
-    angle2 = 22.5
+    angle = 67.5
     p = c.beginPath()
     p.moveTo(x, y)
-    #s*2 = dx*2 + dy*2 dx*2 =  s* - dy*2 dx = wortel (s*2 - dy *2)
-    dy = s * sin(radians(angle1))
+    dy = s * sin(radians(angle))
     dx = sqrt(s**2 - dy**2)
     p.lineTo(x + dx, y + dy)
     p.close()
