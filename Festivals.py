@@ -12,7 +12,7 @@ from reportlab.lib.colors import HexColor
 from reportlab.lib.colors import tan, black, green
 from reportlab.lib.units import inch, cm, mm
 from math import pi
-from math import pi, cos, sin, radians
+from math import pi, cos, sin, radians, sqrt
 
 festivalfont = "LiberationSerif"
 templatedata = []
@@ -132,9 +132,9 @@ def octagon(c, x, y, s):
     angle2 = 22.5
     p = c.beginPath()
     p.moveTo(x, y)
-    #dx = s * cos(angle1)
-    dx = 11.4805
+    #s*2 = dx*2 + dy*2 dx*2 =  s* - dy*2 dx = wortel (s*2 - dy *2)
     dy = s * sin(radians(angle1))
+    dx = sqrt(s**2 - dy**2)
     p.lineTo(x + dx, y + dy)
     p.close()
     c.drawPath(p)
