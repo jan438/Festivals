@@ -232,7 +232,7 @@ def penciltip(c, x, y, debug=1):
         c.grid([x,x+5*u,x+10*u,x+15*u], [y,y+5*u,y+10*u])
         
 def hand(c, x, y):
-    (startx, starty) = (0,0)
+    (startx, starty) = (x,y)
     curves = [
 ( 0, 2), ( 0, 4), ( 0, 8), # back of hand
 ( 5, 8), ( 7,10), ( 7,14),
