@@ -112,11 +112,16 @@ def hexagon(c, x, y, s):
     c.setFont(festivalfont, 7)
     c.drawCentredString(x, y, "Hexagon")
     p = c.beginPath()
-    startangle = 0
+    angle = 60
     p.moveTo(x, y)
-    dx = s * cos(startangle)
-    dy = s * sin(startangle)
-    p.lineTo(x + dx, y + dy)
+    dy1 = s * sin(radians(angle))
+    dx1 = sqrt(s**2 - dy1**2)
+    x = x + dx1
+    y = y + dy1
+    p.lineTo(x, y)
+    x = x + s
+    y = y
+    p.lineTo(x, y)
     p.close()
     c.drawPath(p)
     
