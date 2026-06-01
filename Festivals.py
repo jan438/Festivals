@@ -256,7 +256,7 @@ def hand(canvas, debug=1, fill=0):
 ]
     if debug:
         canvas.setLineWidth(6)
-    u = inch*0.2
+    u = cm*0.2
     p = canvas.beginPath()
     p.moveTo(startx, starty)
     ccopy = list(curves)
