@@ -120,10 +120,14 @@ def hexagon(c, x, y, s):
     y = y + dy1
     p.lineTo(x, y)
     x = x + s
-    y = y
     p.lineTo(x, y)
     x = x + dx1
     y = y - dy1
+    p.lineTo(x, y)
+    x = x - dx1
+    y = y - dy1
+    p.lineTo(x, y)
+    x = x - s
     p.lineTo(x, y)
     p.close()
     c.drawPath(p)
