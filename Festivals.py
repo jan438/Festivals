@@ -171,7 +171,7 @@ def octagon(c, x, y, s):
     c.drawPath(p)
     
 
-def bezier2(c):
+def bezier2(c, x, y):
     xd,yd = 5.5*cm/2, 3*cm/2
     xc,yc = xd,yd
     dxdy = [(0,0.33), (0.33,0.33), (0.75,1), (0.875,0.875),(0.875,0.875), (1,0.75), (0.33,0.33), (0.33,0)]
@@ -192,12 +192,8 @@ def bezier2(c):
         [(x1,y1),(x2,y2),(x3,y3),(x4,y4)] = pointlist[:4]
         del pointlist[:4]
         c.setLineWidth(cm*0.1)
-        c.setStrokeColor(green)
-        c.line(x1,y1,x2,y2)
-        c.setStrokeColor(red)
-        c.line(x3,y3,x4,y4)
         c.setStrokeColor(black)
-        c.bezier(x1,y1, x2,y2, x3,y3, x4,y4)
+        c.bezier(x+x1,y+y1, x+x2,y+y2, x+x3,y+y3, x+x4,y+y4)
 
 def cadre(c, pagesize):
     width = pagesize[0]
@@ -306,7 +302,7 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
         star(c, title="Title", aka="Comment", xcenter=50, ycenter=130, nvertices=5)
         hexagon(c, x=100, y=130, s=20)
         octagon(c, x=150, y=130, s=20)
-        bezier2(c)
+        bezier2(c, 100, 200)
         hand(c)
         c.showPage()
         c.save()
