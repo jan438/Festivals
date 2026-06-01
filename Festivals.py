@@ -137,7 +137,7 @@ def octagon(c, x, y, s):
     x = x + dx
     y = y + dy
     p.lineTo(x, y)
-    p.close()
+    #p.close()
     c.drawPath(p)
     
 def cadre(c, pagesize):
