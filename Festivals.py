@@ -92,7 +92,7 @@ def drawbottomroundRect(c, x, y, w, h, a, color):
     
 def star(c, title, aka, xcenter, ycenter, nvertices):
     c.setFont(festivalfont, 10)
-    radius=inch/3.0
+    radius=cm/3.0
     c.drawCentredString(xcenter, ycenter+1.3*radius, title)
     c.drawCentredString(xcenter, ycenter-1.4*radius, aka)
     p = c.beginPath()
@@ -173,7 +173,7 @@ def octagon(c, x, y, s):
 
 def bezier2(canvas):
     # make a sequence of control points
-    xd,yd = 5.5*inch/2, 3*inch/2
+    xd,yd = 5.5*cm/2, 3*cm/2
     xc,yc = xd,yd
     dxdy = [(0,0.33), (0.33,0.33), (0.75,1), (0.875,0.875),(0.875,0.875), (1,0.75), (0.33,0.33), (0.33,0)]
     pointlist = []
@@ -189,11 +189,11 @@ def bezier2(canvas):
             py = yc + yd*yoffset*dy
             pointlist.append((px,py))
         # draw tangent lines and curves
-    canvas.setLineWidth(inch*0.1)
+    canvas.setLineWidth(cm*0.1)
     while pointlist:
         [(x1,y1),(x2,y2),(x3,y3),(x4,y4)] = pointlist[:4]
         del pointlist[:4]
-        canvas.setLineWidth(inch*0.1)
+        canvas.setLineWidth(cm*0.1)
         canvas.setStrokeColor(green)
         canvas.line(x1,y1,x2,y2)
         canvas.setStrokeColor(red)
