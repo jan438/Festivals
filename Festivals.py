@@ -126,16 +126,19 @@ def octagon(c, x, y, s):
     angle = 67.5
     p = c.beginPath()
     p.moveTo(x, y)
-    dy = s * sin(radians(angle))
-    dx = sqrt(s**2 - dy**2)
-    x = x + dx
-    y = y + dy
+    dy1 = s * sin(radians(angle))
+    dx1 = sqrt(s**2 - dy1**2)
+    x = x + dx1
+    y = y + dy1
     p.lineTo(x, y)
     angle = 22.5
-    dy = s * sin(radians(angle))
-    dx = sqrt(s**2 - dy**2)
-    x = x + dx
-    y = y + dy
+    dy2 = s * sin(radians(angle))
+    dx2 = sqrt(s**2 - dy2**2)
+    x = x + dx2
+    y = y + dy2
+    p.lineTo(x, y)
+    x = x + dx2
+    y = y - dy2
     p.lineTo(x, y)
     #p.close()
     c.drawPath(p)
