@@ -131,6 +131,12 @@ def octagon(c, x, y, s):
     x = x + dx
     y = y + dy
     p.lineTo(x, y)
+    angle = 22.5
+    dy = s * sin(radians(angle))
+    dx = sqrt(s**2 - dy**2)
+    x = x + dx
+    y = y + dy
+    p.lineTo(x, y)
     p.close()
     c.drawPath(p)
     
