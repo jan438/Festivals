@@ -231,7 +231,7 @@ def penciltip(c, x, y, debug=1):
         c.setStrokeColor(green) # put in a frame of reference
         c.grid([x,x+5*u,x+10*u,x+15*u], [y,y+5*u,y+10*u])
         
-def hand(c, fill=0):
+def hand(c, x, y):
     (startx, starty) = (0,0)
     curves = [
 ( 0, 2), ( 0, 4), ( 0, 8), # back of hand
@@ -257,9 +257,9 @@ def hand(c, fill=0):
     while ccopy:
         [(x1,y1), (x2,y2), (x3,y3)] = ccopy[:3]
         del ccopy[:3]
-        p.curveTo(x1*u,y1*u,x2*u,y2*u,x3*u,y3*u)
+        p.curveTo(x+x1*u,y+y1*u,x+x2*u,y+y2*u,x+x3*u,y+y3*u)
     p.close()
-    c.drawPath(p, fill=fill)
+    c.drawPath(p, fill=0)
         
 def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
     try:
@@ -290,7 +290,7 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
         hexagon(c, x=100, y=130, s=20)
         octagon(c, x=150, y=130, s=20)
         bezier2(c, 100, 200)
-        hand(c)
+        hand(c, 10, 200)
         c.showPage()
         c.save()
         print(f"✅ PDF Festivals '{filename}' created successfully.")
