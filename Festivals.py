@@ -171,8 +171,7 @@ def octagon(c, x, y, s):
     c.drawPath(p)
     
 
-def bezier2(canvas):
-    # make a sequence of control points
+def bezier2(c):
     xd,yd = 5.5*cm/2, 3*cm/2
     xc,yc = xd,yd
     dxdy = [(0,0.33), (0.33,0.33), (0.75,1), (0.875,0.875),(0.875,0.875), (1,0.75), (0.33,0.33), (0.33,0)]
@@ -188,19 +187,17 @@ def bezier2(canvas):
             px = xc + xd*xoffset*dx
             py = yc + yd*yoffset*dy
             pointlist.append((px,py))
-        # draw tangent lines and curves
-    canvas.setLineWidth(cm*0.1)
+    c.setLineWidth(cm*0.1)
     while pointlist:
         [(x1,y1),(x2,y2),(x3,y3),(x4,y4)] = pointlist[:4]
         del pointlist[:4]
-        canvas.setLineWidth(cm*0.1)
-        canvas.setStrokeColor(green)
-        canvas.line(x1,y1,x2,y2)
-        canvas.setStrokeColor(red)
-        canvas.line(x3,y3,x4,y4)
-        # finally draw the curve
-        canvas.setStrokeColor(black)
-        canvas.bezier(x1,y1, x2,y2, x3,y3, x4,y4)
+        c.setLineWidth(cm*0.1)
+        c.setStrokeColor(green)
+        c.line(x1,y1,x2,y2)
+        c.setStrokeColor(red)
+        c.line(x3,y3,x4,y4)
+        c.setStrokeColor(black)
+        c.bezier(x1,y1, x2,y2, x3,y3, x4,y4)
 
 def cadre(c, pagesize):
     width = pagesize[0]
