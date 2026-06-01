@@ -235,7 +235,7 @@ def penciltip(c, x, y, debug=1):
         c.setStrokeColor(green) # put in a frame of reference
         c.grid([x,x+5*u,x+10*u,x+15*u], [y,y+5*u,y+10*u])
         
-def hand(canvas, debug=1, fill=0):
+def hand(c, debug=1, fill=0):
     (startx, starty) = (0,0)
     curves = [
 ( 0, 2), ( 0, 4), ( 0, 8), # back of hand
@@ -255,9 +255,9 @@ def hand(canvas, debug=1, fill=0):
 (10, 0), (8, 0), (6, 0), # pinky, then close
 ]
     if debug:
-        canvas.setLineWidth(6)
+        c.setLineWidth(6)
     u = cm*0.2
-    p = canvas.beginPath()
+    p = c.beginPath()
     p.moveTo(startx, starty)
     ccopy = list(curves)
     while ccopy:
@@ -265,17 +265,17 @@ def hand(canvas, debug=1, fill=0):
         del ccopy[:3]
         p.curveTo(x1*u,y1*u,x2*u,y2*u,x3*u,y3*u)
     p.close()
-    canvas.drawPath(p, fill=fill)
+    c.drawPath(p, fill=fill)
     if debug:
         (lastx, lasty) = (startx, starty)
         ccopy = list(curves)
         while ccopy:
             [(x1,y1), (x2,y2), (x3,y3)] = ccopy[:3]
             del ccopy[:3]
-            canvas.setStrokeColor(red)
-            canvas.line(lastx*u,lasty*u, x1*u,y1*u)
-            canvas.setStrokeColor(green)
-            canvas.line(x2*u,y2*u, x3*u,y3*u)
+            c.setStrokeColor(red)
+            c.line(lastx*u,lasty*u, x1*u,y1*u)
+            c.setStrokeColor(green)
+            c.line(x2*u,y2*u, x3*u,y3*u)
             (lastx,lasty) = (x3,y3)
         
 def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
