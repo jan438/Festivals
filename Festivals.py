@@ -149,6 +149,9 @@ def octagon(c, x, y, s):
     x = x - dx2
     y = y - dy2
     p.lineTo(x, y)
+    x = x - dx2
+    y = y + dy2
+    p.lineTo(x, y)
     #p.close()
     c.drawPath(p)
     
