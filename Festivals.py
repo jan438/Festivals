@@ -272,6 +272,16 @@ def spiral(c, x, y):
         p.lineTo(x + dx, y + dy)
     c.drawPath(p)
     p.close()
+    
+    p = c.beginPath()
+    p.moveTo(x, y)
+    for angle in range(0, 1800, 5):
+        radius=angle/20
+        dx=radius*cos(radians(angle))
+        dy=radius*sin(radians(angle))
+        p.lineTo(x + dx, y + dy)
+    c.drawPath(p)
+    p.close()
         
 def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
     try:
