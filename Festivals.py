@@ -131,7 +131,45 @@ def hexagon(c, x, y, s):
     p.close()
     c.drawPath(p)
     
-def octagon(c, x, y, s):
+def octagon1(c, x, y, s):
+    c.setFont(festivalfont, 7)
+    c.drawCentredString(x, y, "Octagon")
+    angle = 67.5
+    p = c.beginPath()
+    p.moveTo(x, y)
+    dy1 = s * sin(radians(angle))
+    dx1 = sqrt(s**2 - dy1**2)
+    x = x + dx1
+    y = y + dy1
+    p.lineTo(x, y)
+    angle = 22.5
+    dy2 = s * sin(radians(angle))
+    dx2 = sqrt(s**2 - dy2**2)
+    x = x + dx2
+    y = y + dy2
+    p.lineTo(x, y)
+    x = x + dx2
+    y = y - dy2
+    p.lineTo(x, y)
+    x = x + dx1
+    y = y - dy1
+    p.lineTo(x, y)
+    x = x - dx1
+    y = y - dy1
+    p.lineTo(x, y)
+    x = x - dx2
+    y = y - dy2
+    p.lineTo(x, y)
+    x = x - dx2
+    y = y + dy2
+    p.lineTo(x, y)
+    x = x - dx1
+    y = y + dy1
+    p.lineTo(x, y)
+    p.close()
+    c.drawPath(p)
+    
+def octagon2(c, x, y, s):
     c.setFont(festivalfont, 7)
     c.drawCentredString(x, y, "Octagon")
     angle = 67.5
@@ -298,7 +336,8 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
         penciltip(c, 10, 50, True)
         star(c, title="Title", aka="Comment", xcenter=50, ycenter=130, nvertices=5)
         hexagon(c, x=100, y=130, s=20)
-        octagon(c, x=150, y=130, s=20)
+        octagon1(c, x=150, y=130, s=20)
+        octagon2(c, x=150, y=200, s=20)
         bezier2(c, 100, 200)
         hand(c, 10, 200)
         spiral(c, 100, 350)
