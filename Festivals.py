@@ -261,19 +261,21 @@ def hand(c, x, y):
     
 def spiral(c, x, y):
     c.setLineWidth(4)
-    p = c.beginPath()
+    #p = c.beginPath()
     #even    arc(500, 525, 50+i*50, 50+i*50, HALF_PI, HALF_PI+PI)
     #oneven  arc(500, 500, 50+i*50, 50+i*50, HALF_PI+PI, HALF_PI + 2*PI)
-    p.arc(x + 3*cm, y + cm, x + 4*cm, y + 2.5*cm, startAng=-45, extent=270)
-    c.drawPath(p, stroke=1)
-    p.close()
+    #p.arc(x + 3*cm, y + cm, x + 4*cm, y + 2.5*cm, startAng=-45, extent=270)
+    #c.drawPath(p, stroke=1)
+    #p.close()
     p = c.beginPath()
     p.moveTo(x, y)
+    p.lineTo(x + 40, y + 40)
     for i in range(720):
         angle = 0.1 * i
         x=(1+angle)*cos(radians(angle))
         y=(1+angle)*sin(radians(angle))
         p.lineTo(x, y)
+    c.drawPath(p)
     p.close()
         
 def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
