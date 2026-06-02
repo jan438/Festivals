@@ -260,13 +260,15 @@ def hand(c, x, y):
     c.drawPath(p, fill=0)
     
 def spiral(c, x, y):
+    a = 1
+    b = 1
     c.setLineWidth(4)
     p = c.beginPath()
     p.moveTo(x, y)
     for i in range(720):
         angle = 0.1 * i
-        dx=(1+angle)*cos(radians(angle))
-        dy=(1+angle)*sin(radians(angle))
+        dx=(a+b*angle)*cos(radians(angle))
+        dy=(a+b*angle)*sin(radians(angle))
         p.lineTo(x + dx, y + dy)
     c.drawPath(p)
     p.close()
