@@ -260,19 +260,6 @@ def hand(c, x, y):
     c.drawPath(p, fill=0)
     
 def spiral(c, x, y):
-    a = 1.8
-    b = 1.5
-    c.setLineWidth(4)
-    p = c.beginPath()
-    p.moveTo(x, y)
-    for i in range(720):
-        angle = 0.1 * i
-        dx=(a+b*angle)*cos(radians(angle))
-        dy=(a+b*angle)*sin(radians(angle))
-        p.lineTo(x + dx, y + dy)
-    c.drawPath(p)
-    p.close()
-    
     p = c.beginPath()
     p.moveTo(x, y)
     for angle in range(0, 1800, 5):
@@ -314,7 +301,7 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
         octagon(c, x=150, y=130, s=20)
         bezier2(c, 100, 200)
         hand(c, 10, 200)
-        spiral(c, 10, 250)
+        spiral(c, 100, 350)
         c.showPage()
         c.save()
         print(f"✅ PDF Festivals '{filename}' created successfully.")
