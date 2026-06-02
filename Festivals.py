@@ -266,6 +266,11 @@ def spiral(c, x, y):
     #oneven  arc(500, 500, 50+i*50, 50+i*50, HALF_PI+PI, HALF_PI + 2*PI)
     p.arc(x + 3*cm, y + cm, x + 4*cm, y + 2.5*cm, startAng=-45, extent=270)
     c.drawPath(p, stroke=1)
+    #for (i=0; i< 720; i++)
+        #angle = 0.1 * i;
+        #x=(1+angle)*Math.cos(angle);
+        #y=(1+angle)*Math.sin(angle);
+        #context.lineTo(x, y);
         
 def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
     try:
