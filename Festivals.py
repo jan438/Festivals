@@ -263,12 +263,11 @@ def spiral(c, x, y):
     c.setLineWidth(4)
     p = c.beginPath()
     p.moveTo(x, y)
-    p.lineTo(x + 40, y + 40)
     for i in range(720):
         angle = 0.1 * i
-        x=(1+angle)*cos(radians(angle))
-        y=(1+angle)*sin(radians(angle))
-        #p.lineTo(x, y)
+        dx=(1+angle)*cos(radians(angle))
+        dy=(1+angle)*sin(radians(angle))
+        p.lineTo(x + dx, y + dy)
     c.drawPath(p)
     p.close()
         
