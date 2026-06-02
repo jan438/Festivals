@@ -270,6 +270,7 @@ def spiral(c):
 def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
     try:
         c = canvas.Canvas(filename, pagesize=pagesize)
+        c.setTitle(title)
         width, height = pagesize
         c.setFillColor(HexColor('#FECDE5'))
         c.rect(0, 0, width, height, fill=1)
