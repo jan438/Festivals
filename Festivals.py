@@ -260,8 +260,8 @@ def hand(c, x, y):
     c.drawPath(p, fill=0)
     
 def spiral(c, x, y):
-    a = 1
-    b = 1
+    a = 1.8
+    b = 1.5
     c.setLineWidth(4)
     p = c.beginPath()
     p.moveTo(x, y)
