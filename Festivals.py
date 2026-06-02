@@ -170,7 +170,6 @@ def octagon(c, x, y, s):
     p.close()
     c.drawPath(p)
     
-
 def bezier2(c, x, y):
     xd,yd = 5.5*cm/2, 3*cm/2
     xc,yc = xd,yd
@@ -260,6 +259,13 @@ def hand(c, x, y):
         p.curveTo(x+x1*u,y+y1*u,x+x2*u,y+y2*u,x+x3*u,y+y3*u)
     p.close()
     c.drawPath(p, fill=0)
+    
+def spiral(c):
+    c.setLineWidth(4)
+    c.setFillColorRGB(1, 0.6, 0.8)
+    p = c.beginPath()
+    p.arc(3*inch, inch, 4*inch, 2.5*inch, startAng=-45, extent=270)
+    c.drawPath(p, fill=1, stroke=1)
         
 def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
     try:
@@ -291,6 +297,7 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
         octagon(c, x=150, y=130, s=20)
         bezier2(c, 100, 200)
         hand(c, 10, 200)
+        spiral(c)
         c.showPage()
         c.save()
         print(f"✅ PDF Festivals '{filename}' created successfully.")
