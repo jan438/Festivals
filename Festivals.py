@@ -312,7 +312,7 @@ def heart(c, x, y, width, height):
     y2 = (height/100.0)*10.0
     x3 = (width/100.0)*90.0
     y3 = (height/100.0)*33.33
-    p.moveTo(x + x1, y + y1)
+    p.moveTo(x + pX, y + pY)
     p.curveTo(x + x1, y + y1, x + x2, y + y2, x + x3, y + y3)
     p.moveTo(x + x3,y + pY)
     x1 = (width/100.0)*90.0
