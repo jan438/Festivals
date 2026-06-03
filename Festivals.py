@@ -321,7 +321,6 @@ def heart(c, x, y, width, height):
     x3 = (width/100.0)*50.0
     y3 = (height/100.0)*90.0
     p.curveTo(x + x1, y + y1, x + x2, y + y2, x + x3, y + y3)
-    p.lineTo(x + pX,y + pY)  
     x1 = (width/100.0)*50.0
     y1 = (height/100.0)*5.0
     x2 = (width/100.0)*10.0
@@ -338,7 +337,6 @@ def heart(c, x, y, width, height):
     x3 = (width/100.0)*50.0
     y3 = (height/100.0)*90.0
     p.curveTo(x + x1, y + y1, x + x2, y + y2, x + x3, y + y3)
-    p.lineTo(x + pX,y + pY)
     p.moveTo(x + x3,y + y3)
     c.drawPath(p)
     p.close()
