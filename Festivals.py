@@ -303,8 +303,8 @@ def spiral(c, x, y):
     
 def heart(c, x, y, width, height):
     p = c.beginPath()
-    px = width/2.0
-    py = (height/100.0)*33.33
+    pX = width/2.0
+    pY = (height/100.0)*33.33
     x1 = (width/100.0)*50.0
     y1 = (height/100.0)*5.0
     x2 = (width/100.0)*90.0
@@ -312,7 +312,15 @@ def heart(c, x, y, width, height):
     x3 = (width/100.0)*90.0
     y3 = (height/100.0)*33.33
     p.moveTo(x, y)
-    p.curveTo(x + x1, y + y1, x + x2, y + y2, x + x3, y + y3);
+    p.curveTo(x + x1, y + y1, x + x2, y + y2, x + x3, y + y3)
+    p.moveTo(x3,pY)
+    x1 = (width/100.0)*90.0
+    y1 = (height/100.0)*55.0
+    x2 = (width/100.0)*65.0
+    y2 = (height/100.0)*60.0
+    x3 = (width/100.0)*50.0
+    y3 = (height/100.0)*90.0
+    p.curveTo(x1, y1, x2, y2, x3, y3)
     c.drawPath(p)
     p.close()
     
