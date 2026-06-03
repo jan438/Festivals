@@ -305,6 +305,7 @@ def heart(c, x, y, width, height):
     p = c.beginPath()
     pX = width/2.0
     pY = (height/100.0)*33.33
+    
     x1 = (width/100.0)*50.0
     y1 = (height/100.0)*5.0
     x2 = (width/100.0)*90.0
