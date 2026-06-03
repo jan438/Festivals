@@ -300,7 +300,31 @@ def spiral(c, x, y):
         p.lineTo(x + dx, y + dy)
     c.drawPath(p)
     p.close()
-        
+    
+def heart(c, x, y, width, height):
+    #float pX = width/2f;
+    #float pY = (height/100f)*33.33f;
+    #float x1 = (width/100f)*50;
+    #float y1 = (height/100f)*5;
+    #float x2 = (width/100f)*90;
+    #float y2 = (height/100f)*10;
+    #float x3 = (width/100f)*90;
+    #float y3 = (height/100f)*33.33f;
+
+    p = c.beginPath()
+    px = width/2.0
+    py = (height/100.0)*33.33
+    x1 = (width/100.0)*50.0
+    y1 = (height/100.0)*5.0
+    x2 = (width/100.0)*90.0
+    y2 = (height/100.0)*10.0
+    x3 = (width/100.0)*90.0
+    y3 = (height/100.0)*33.33
+    p.moveTo(x, y)
+    p.curveTo(x1, y1, x2, y2, x3, y3);
+    c.drawPath(p)
+    p.close()
+    
 def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
     try:
         c = canvas.Canvas(filename, pagesize=pagesize)
@@ -334,6 +358,7 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
         bezier2(c, 100, 200)
         hand(c, 10, 200)
         spiral(c, 100, 350)
+        heart(c, 200, 350, 50, 50)
         c.showPage()
         c.save()
         print(f"✅ PDF Festivals '{filename}' created successfully.")
