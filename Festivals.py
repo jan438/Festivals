@@ -349,7 +349,7 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
         bezier2(c, 100, 200)
         hand(c, 10, 200)
         spiral(c, 100, 350)
-        heart(c, 200, 350, 10, 10)
+        heart(c, 200, 350, 50, 50)
         c.showPage()
         c.save()
         print(f"✅ PDF Festivals '{filename}' created successfully.")
