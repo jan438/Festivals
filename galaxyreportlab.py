@@ -29,6 +29,14 @@ pdfmetrics.registerFont(TTFont('LiberationSerifBoldItalic', 'LiberationSerif-Bol
 c = canvas.Canvas("PDF/Galaxy.pdf", pagesize=A3)
 c.setTitle("Galaxy")
 width, height = A3
+
+c.setFillColor(HexColor('#000000'))      
+c.rect(0, 0, width, height, fill=1)
+c.setFillColor(HexColor('#FFFFFF'))      
+c.setFont(galaxyfont, 50)
+c.drawString(100,110,'*')
+#c.create_text(x, y, fill='white', font=('Helvetica', '5'), text='.')
+
 c.showPage()
 c.save()
 
