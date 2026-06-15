@@ -361,6 +361,9 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
         scale_value = variable_dict["scaleinfobox" + ps]
         drawing = scaleSVG('SVG/infobox.svg', float(scale_value))
         renderPDF.draw(drawing, c, 150, 475)
+        scale_value = variable_dict["scaleinfobox" + ps]
+        drawing = scaleSVG('SVG/Plus_symbol.svg', float(scale_value))
+        renderPDF.draw(drawing, c, 150, 475)
         dy = width / 10
         drawallroundRect(c,  30,  dy, 1, 1, 50, "#80ff84")
         drawrightroundRect(c,  230,  dy, 1, 40, 50, "#80ff84")
