@@ -15,6 +15,7 @@ from math import pi, cos, sin, radians, sqrt
 
 festivalfont = "LiberationSerif"
 templatedata = []
+festivaldata = []
 
 def scaleSVG(svgfile, scaling_factor):
     svg_root = load_svg_file(svgfile)
@@ -393,12 +394,18 @@ if sys.platform[0] == 'l':
 if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/Festivals"
 os.chdir(path)
-
 pdfmetrics.registerFont(TTFont('LiberationSerif', 'LiberationSerif-Regular.ttf'))
 pdfmetrics.registerFont(TTFont('LiberationSerifBold', 'LiberationSerif-Bold.ttf'))
 pdfmetrics.registerFont(TTFont('LiberationSerifItalic', 'LiberationSerif-Italic.ttf'))
 pdfmetrics.registerFont(TTFont('LiberationSerifBoldItalic', 'LiberationSerif-BoldItalic.ttf'))
-
+file_to_open = "Data/FestivalsInternational.csv"
+with open(file_to_open, 'r') as file:
+    csvreader = csv.reader(file, delimiter = ';')
+    count = 0
+    for row in csvreader:
+        festivaldata.append(row)
+        count += 1
+print(count)
 file_to_open = "Data/template.csv"
 with open(file_to_open, 'r') as file:
     csvreader = csv.reader(file, delimiter = ';')
