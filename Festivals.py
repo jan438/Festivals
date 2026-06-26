@@ -14,8 +14,10 @@ from reportlab.lib.units import inch, cm, mm
 from math import pi, cos, sin, radians, sqrt
 
 festivalfont = "LiberationSerif"
-templatedata = []
 festivaldata = []
+templatedata = []
+maxfestivals = 10
+maxfestivalspage = 25
 
 def scaleSVG(svgfile, scaling_factor):
     svg_root = load_svg_file(svgfile)
@@ -344,6 +346,9 @@ def heart(c, x, y, width, height):
     p.close()
     
 def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
+    row = 25
+    col = 0
+    position = 500
     try:
         c = canvas.Canvas(filename, pagesize=pagesize)
         c.setTitle(title)
@@ -352,6 +357,20 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
         c.rect(0, 0, width, height, fill=1)
         c.setFillColor(HexColor('#000000'))
         cadre(c, pagesize)
+        c.setTitle("Festivals 2026")
+        c.setFont(festivalfont, 12)
+        c.setFillColor(HexColor('#000000'))
+        count = 0
+        for i in range(len(festivaldata)):
+            c.drawString(leftmargin + col * colwidth + 50, bottommargin + row * rowheight, festivaldata[i][0])
+            c.drawString(leftmargin + col * colwidth + 350, bottommargin + row * rowheight, festivaldata[i][1])
+            row -= 1
+            count += 1
+            position -= 1
+            if count == maxfestivalspage:
+                c.showPage()
+                count = 0
+                row = 25
         titlefontsize_value = variable_dict["titlefontsize" + ps]
         titley_value = variable_dict["titley" + ps]
         namewidth = pdfmetrics.stringWidth(title, festivalfont, titlefontsize_value)
@@ -414,12 +433,13 @@ with open(file_to_open, 'r') as file:
         templatedata.append(row)
         count += 1
 print(count)
-
+colwidth = 200
+rowheight = 20
+leftmargin = 10
+bottommargin = 100
 variable_dict = {}
-
 for i in range(len(templatedata)):
     variable_dict[templatedata[i][0]] = float(templatedata[i][1])
-
 create_Fesival_pdf("PDF/Festivals_A4.pdf", "A4", A4, title="A4 Festivals")
 create_Fesival_pdf("PDF/Festivals_A3.pdf", "A3", A3, title="A3 Festivals")
 
