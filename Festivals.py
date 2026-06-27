@@ -376,13 +376,13 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
         c = canvas.Canvas(filename, pagesize=pagesize)
         c.setTitle(title)
         width, height = pagesize
-        c.setFillColor(HexColor('#FECDE5'))
-        c.rect(0, 0, width, height, fill=1)
-        c.setFillColor(HexColor('#000000'))
-        cadre(c, pagesize)
+        #c.setFillColor(HexColor('#FECDE5'))
+        #c.rect(0, 0, width, height, fill=1)
+        #c.setFillColor(HexColor('#000000'))
+        #cadre(c, pagesize)
         c.setTitle("Festivals 2026")
         c.setFont(festivalfont, 12)
-        c.setFillColor(HexColor('#000000'))
+        #c.setFillColor(HexColor('#000000'))
         count = 0
         for i in range(len(festivaldata)):
             c.drawString(leftmargin + col * colwidth + 50, bottommargin + row * rowheight, festivaldata[i][0])
