@@ -376,15 +376,14 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
         c = canvas.Canvas(filename, pagesize=pagesize)
         c.setTitle(title)
         width, height = pagesize
-        #c.setFillColor(HexColor('#FECDE5'))
-        #c.rect(0, 0, width, height, fill=1)
-        #c.setFillColor(HexColor('#000000'))
+        c.setFillColor(HexColor('#FECDE5'))
+        c.rect(0, 0, width, height, fill=1)
         #cadre(c, pagesize)
         c.setTitle("Festivals 2026")
-        c.setFont(festivalfont, 12)
-        #c.setFillColor(HexColor('#000000'))
         count = 0
         for i in range(len(festivaldata)):
+            c.setFillColor(HexColor('#000000'))
+            c.setFont(festivalfont, 12)
             c.drawString(leftmargin + col * colwidth + 50, bottommargin + row * rowheight, festivaldata[i][0])
             c.drawString(leftmargin + col * colwidth + 350, bottommargin + row * rowheight, festivaldata[i][1])
             row -= 1
@@ -392,8 +391,12 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
             position -= 1
             if count == maxfestivalspage:
                 c.showPage()
+                position = 500
                 count = 0
                 row = 25
+                col = 0
+                c.setFillColor(HexColor('#FECDE5'))
+                c.rect(0, 0, width, height, fill=1)
         #titlefontsize_value = variable_dict["titlefontsize" + ps]
         #titley_value = variable_dict["titley" + ps]
         #namewidth = pdfmetrics.stringWidth(title, festivalfont, titlefontsize_value)
