@@ -433,6 +433,19 @@ with open(file_to_open, 'r') as file:
         templatedata.append(row)
         count += 1
 print(count)
+festivalcal = "Calendar/Festivals2026.ics"
+in_file = open(os.path.join(path, festivalcal), 'r')
+count = 0
+lastpos = 0
+found = 0
+alleventslines = []
+for line in in_file:
+    newlinepos = line.find("\t\n")
+    lastsubstring = line[lastpos:newlinepos]
+    alleventslines.append(lastsubstring)
+    count += 1
+in_file.close()
+print("Count eventslines", len(alleventslines))
 colwidth = 200
 rowheight = 20
 leftmargin = 10
