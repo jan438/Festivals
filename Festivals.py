@@ -410,12 +410,12 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
         #scale_value = variable_dict["scaleinfobox" + ps]
         #drawing = scaleSVG('SVG/star200200.svg', float(scale_value))
         #renderPDF.draw(drawing, c, 150, 475)
-        dy = width / 10
-        drawallroundRect(c,  30,  dy, 1, 1, 50, "#80ff84")
-        drawrightroundRect(c,  230,  dy, 1, 40, 50, "#80ff84")
-        drawleftroundRect(c,  430,  dy, 1, 40, 50, "#80ff84")
-        drawtoproundRect(c,  230,  3 * dy, 40, 1, 50, "#80ff84")
-        drawbottomroundRect(c,  430,  3 * dy, 40, 1, 50, "#80ff84")
+        #dy = width / 10
+        #drawallroundRect(c,  30,  dy, 1, 1, 50, "#80ff84")
+        #drawrightroundRect(c,  230,  dy, 1, 40, 50, "#80ff84")
+        #drawleftroundRect(c,  430,  dy, 1, 40, 50, "#80ff84")
+        #drawtoproundRect(c,  230,  3 * dy, 40, 1, 50, "#80ff84")
+        #drawbottomroundRect(c,  430,  3 * dy, 40, 1, 50, "#80ff84")
         #penciltip(c, 10, 50, True)
         #star(c, title="Title", aka="Comment", xcenter=50, ycenter=130, nvertices=5)
         #hexagon(c, x=100, y=130, s=20)
