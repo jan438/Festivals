@@ -394,13 +394,13 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
                 c.showPage()
                 count = 0
                 row = 25
-        titlefontsize_value = variable_dict["titlefontsize" + ps]
-        titley_value = variable_dict["titley" + ps]
-        namewidth = pdfmetrics.stringWidth(title, festivalfont, titlefontsize_value)
-        c.setFont(festivalfont, titlefontsize_value)
-        c.drawCentredString(width / 2, height - titley_value, title)
-        c.setLineWidth(1)
-        c.rect(325, 444, 40, 40)
+        #titlefontsize_value = variable_dict["titlefontsize" + ps]
+        #titley_value = variable_dict["titley" + ps]
+        #namewidth = pdfmetrics.stringWidth(title, festivalfont, titlefontsize_value)
+        #c.setFont(festivalfont, titlefontsize_value)
+        #c.drawCentredString(width / 2, height - titley_value, title)
+        #c.setLineWidth(1)
+        #c.rect(325, 444, 40, 40)
         #scale_value = variable_dict["scaleinfobox" + ps]
         #drawing = scaleSVG('SVG/infobox.svg', float(scale_value))
         #renderPDF.draw(drawing, c, 150, 475)
