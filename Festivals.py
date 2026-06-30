@@ -381,11 +381,11 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
         #cadre(c, pagesize)
         c.setTitle("Festivals 2026")
         count = 0
-        for i in range(len(festivaldata)):
+        for i in range(len(festivalevents)):
             c.setFillColor(HexColor('#000000'))
             c.setFont(festivalfont, 12)
-            c.drawString(leftmargin + col * colwidth + 50, bottommargin + row * rowheight, festivaldata[i][0])
-            c.drawString(leftmargin + col * colwidth + 350, bottommargin + row * rowheight, festivaldata[i][1])
+            c.drawString(leftmargin + col * colwidth + 50, bottommargin + row * rowheight, festivalevents[i].summary)
+            c.drawString(leftmargin + col * colwidth + 350, bottommargin + row * rowheight, festivalevents[i].summary)
             row -= 1
             count += 1
             position -= 1
