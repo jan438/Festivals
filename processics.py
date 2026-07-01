@@ -123,6 +123,15 @@ e.begin = e.begin = datetime(
         second=0,
         tzinfo=None
     )
+e.end = e.end = datetime(
+        year,
+        month,
+        end,
+        hour=0,
+        minute=0,
+        second=0,
+        tzinfo=None
+    )
 c.events.add(e)
 
 with open("Calendar/Festivals2026.ics", "w") as f:
