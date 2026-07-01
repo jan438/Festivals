@@ -107,11 +107,12 @@ loc = "loc"
 month = "month"
 addFestivalEvent("summary", "start", "end", "des", "loc", "month")
     
-#e = Event()
-#e.name = festivalevents[i].summary
-#e.description = festivalevents[i].description
-#e.location = festivalevents[i].location
-#c.events.add(e)
+i = len(festivalevents) - 1
+e = Event()
+e.name = festivalevents[i].summary
+e.description = festivalevents[i].description
+e.location = festivalevents[i].location
+c.events.add(e)
 
 with open("Calendar/Festivals2026.ics", "w") as f:
     f.writelines(c)
