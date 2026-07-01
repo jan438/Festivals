@@ -22,7 +22,7 @@ class FestivalEvent:
         self.month = month
         
 def addFestivalEvent(summary, startday, endday, description, location, month):
-    festivalevents.append(summary, startday, endday, description, location, month)
+    festivalevents.append(FestivalEvent(summary, startday, endday, description, location, month))
 
 def converttimetztolocalclock(timetz):
     utc_string = timetz
@@ -99,11 +99,19 @@ for i in range(len(festivalevents)):
     e.location = festivalevents[i].location
     c.events.add(e)
     
-e = Event()
-e.name = festivalevents[i].summary
-e.description = festivalevents[i].description
-e.location = festivalevents[i].location
-c.events.add(e)
+summary = "summary"
+start = "start"
+end= "end"
+des = "des"
+loc = "loc"
+month = "month"
+addFestivalEvent("summary", "start", "end", "des", "loc", "month")
+    
+#e = Event()
+#e.name = festivalevents[i].summary
+#e.description = festivalevents[i].description
+#e.location = festivalevents[i].location
+#c.events.add(e)
 
 with open("Calendar/Festivals2026.ics", "w") as f:
     f.writelines(c)
