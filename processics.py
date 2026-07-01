@@ -106,8 +106,8 @@ end= "end"
 des = "des"
 loc = "loc"
 month = "month"
-year = "2026"
-addFestivalEvent("summary", "start", "end", "des", "loc", "month", "2026")
+year = 2026
+addFestivalEvent("summary", "start", "end", "des", "loc", "month", year)
     
 i = len(festivalevents) - 1
 e = Event()
