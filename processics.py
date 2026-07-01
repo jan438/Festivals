@@ -13,13 +13,12 @@ alleventslines = []
 festivalevents = []
 
 class FestivalEvent:
-    def __init__(self, summary, day, description, location, starttime, endtime, month):
+    def __init__(self, summary, startday, endday, description, location, month):
         self.summary = summary
-        self.day = day
+        self.startday = startday
+        self.endday = endday
         self.description = description
         self.location = location
-        self.starttime = starttime
-        self.endtime = endtime
         self.month = month
 
 def converttimetztolocalclock(timetz):
@@ -57,11 +56,11 @@ for i in range(len(alleventslines)):
     dtendeventpos = alleventslines[i].find("DTEND")
     endeventpos = alleventslines[i].find("END:VEVENT")
     if neweventpos == 0:
-        day = 0
+        summary = ""
+        startday = 0
+        endday = 0
         description = ""
         location = ""
-        starttime = 0
-        endtime = 0
         month = 0
     if dtstarteventpos == 0:
         eventdtstartstr = alleventslines[i][8:]
@@ -70,7 +69,8 @@ for i in range(len(alleventslines)):
             eventdtstartstr = alleventslines[i][19:]
         year = int(eventdtstartstr[:4])
         month = int(eventdtstartstr[4:6])
-        day = int(eventdtstartstr[6:8])
+        startday = int(eventdtstartstr[6:8])
+        endday = int(eventdtstartstr[6:8])
         starttime = eventdtstartstr
     if dtendeventpos == 0:
         endtime = alleventslines[i][6:]
@@ -81,7 +81,7 @@ for i in range(len(alleventslines)):
     if locationeventpos == 0:
         location = alleventslines[i][9:]
     if endeventpos == 0:
-        festivalevents.append(FestivalEvent(summary, day, description, location, starttime, endtime, month))
+        festivalevents.append(FestivalEvent(summary, startday, endday, description, location, month))
 print("Count festival events", len(festivalevents))
 
 c = Calendar()
