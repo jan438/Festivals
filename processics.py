@@ -13,16 +13,17 @@ alleventslines = []
 festivalevents = []
 
 class FestivalEvent:
-    def __init__(self, summary, startday, endday, description, location, month):
+    def __init__(self, summary, startday, endday, description, location, month, year):
         self.summary = summary
         self.startday = startday
         self.endday = endday
         self.description = description
         self.location = location
         self.month = month
+        self.year = year
         
-def addFestivalEvent(summary, startday, endday, description, location, month):
-    festivalevents.append(FestivalEvent(summary, startday, endday, description, location, month))
+def addFestivalEvent(summary, startday, endday, description, location, month, year):
+    festivalevents.append(FestivalEvent(summary, startday, endday, description, location, month, year))
 
 def converttimetztolocalclock(timetz):
     utc_string = timetz
@@ -88,7 +89,7 @@ for i in range(len(alleventslines)):
     if locationeventpos == 0:
         location = alleventslines[i][9:]
     if endeventpos == 0:
-        festivalevents.append(FestivalEvent(summary, startday, endday, description, location, month))
+        festivalevents.append(FestivalEvent(summary, startday, endday, description, location, month, year))
 print("Count festival events", len(festivalevents))
 
 c = Calendar()
@@ -105,7 +106,8 @@ end= "end"
 des = "des"
 loc = "loc"
 month = "month"
-addFestivalEvent("summary", "start", "end", "des", "loc", "month")
+year = "2026"
+addFestivalEvent("summary", "start", "end", "des", "loc", "month", "2026")
     
 i = len(festivalevents) - 1
 e = Event()
