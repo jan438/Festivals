@@ -101,13 +101,13 @@ for i in range(len(festivalevents)):
     c.events.add(e)
     
 summary = "summary"
-start = "start"
-end= "end"
+start = 12
+end= 14
 des = "des"
 loc = "loc"
-month = "month"
+month = 12
 year = 2026
-addFestivalEvent("summary", "start", "end", "des", "loc", "month", year)
+addFestivalEvent("summary", start, end, "des", "loc", month, year)
     
 i = len(festivalevents) - 1
 e = Event()
