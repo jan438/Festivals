@@ -67,17 +67,17 @@ for i in range(len(alleventslines)):
         datevaluepos = alleventslines[i].find("VALUE=DATE:")
         if datevaluepos == 8:
             eventdtstartstr = alleventslines[i][19:]
-        print(eventdtstartstr)
+        print("startime", eventdtstartstr)
         startday = int(eventdtstartstr[6:8])
     if dtendeventpos == 0:
         eventdtendstr = alleventslines[i][17:]
         datevaluepos = alleventslines[i].find("VALUE=DATE:")
         if datevaluepos == 8:
             eventdtendstr = alleventslines[i][17:]
-        print(eventdtendstr)
-        #year = int(eventdtendstr[:2])
-        #month = int(eventdtendstr[4:6])
-        #endday = int(eventdtendstr[4:6])
+        year = int(eventdtendstr[:4])
+        month = int(eventdtendstr[4:6])
+        endday = int(eventdtendstr[6:8])
+        print("endtime",eventdtendstr, year, month, endday)
     if summaryeventpos == 0:
         summary = alleventslines[i][8:]
     if descriptioneventpos == 0:
