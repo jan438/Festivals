@@ -73,7 +73,7 @@ for i in range(len(alleventslines)):
         datevaluepos = alleventslines[i].find("VALUE=DATE:")
         if datevaluepos == 8:
             eventdtendstr = alleventslines[i][17:]
-            print(eventdtendstr)
+        print(eventdtendstr)
         #year = int(eventdtendstr[:2])
         #month = int(eventdtendstr[4:6])
         #endday = int(eventdtendstr[4:6])
