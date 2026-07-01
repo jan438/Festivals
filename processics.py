@@ -24,7 +24,7 @@ class FestivalEvent:
 
 def converttimetztolocalclock(timetz):
     utc_string = timetz
-    utc_format = "%Y%m%dT%H%M%S"
+    utc_format = "%Y%m%dT%H%M"
     local_tz = pytz.timezone('Europe/Amsterdam')
     utc_dt = datetime.strptime(utc_string, utc_format)
     local_dt = utc_dt
@@ -96,26 +96,6 @@ for i in range(len(festivalevents)):
     opponent2 = ""
     e.description = festivalevents[i].description
     e.location = festivalevents[i].location
-    [hourb, minuteb] = converttimetztolocalclock(festivalevents[i].starttime)
-    e.begin = datetime(
-        year=2026,
-        month=festivalevents[i].month,
-        day=festivalevents[i].day,
-        hour=hourb,
-        minute=minuteb,
-        second=0,
-        tzinfo=None
-    )
-    [houre, minutee] = converttimetztolocalclock(festivalevents[i].endtime)
-    e.end = datetime(
-        year=2026,
-        month=festivalevents[i].month,
-        day=festivalevents[i].day,
-        hour=hourb,
-        minute=minuteb + 15,
-        second=0,
-        tzinfo=None
-    )
     c.events.add(e)
 
 with open("Calendar/WK2026ics.ics", "w") as f:
