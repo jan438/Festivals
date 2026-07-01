@@ -70,7 +70,7 @@ for i in range(len(alleventslines)):
         print(eventdtstartstr)
         startday = int(eventdtstartstr[6:8])
     if dtendeventpos == 0:
-        eventdtendstr = alleventslines[i][8:]
+        eventdtendstr = alleventslines[i][17:]
         datevaluepos = alleventslines[i].find("VALUE=DATE:")
         if datevaluepos == 8:
             eventdtendstr = alleventslines[i][17:]
