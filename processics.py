@@ -114,6 +114,15 @@ e = Event()
 e.name = festivalevents[i].summary
 e.description = festivalevents[i].description
 e.location = festivalevents[i].location
+e.begin = e.begin = datetime(
+        year,
+        month,
+        start,
+        hour=0,
+        minute=0,
+        second=0,
+        tzinfo=None
+    )
 c.events.add(e)
 
 with open("Calendar/Festivals2026.ics", "w") as f:
