@@ -21,13 +21,12 @@ maxfestivals = 10
 maxfestivalspage = 25
 
 class FestivalEvent:
-    def __init__(self, summary, day, location, description, starttime, endtime, month):
+    def __init__(self, summary, startday, endday, location, description, month):
         self.summary = summary
-        self.day = day
         self.location = location
         self.description = description
-        self.starttime = starttime
-        self.endtime = endtime
+        self.startday = startday
+        self.endday = endday
         self.month = month
         
 def weekDay(year, month, day):
@@ -224,7 +223,7 @@ for i in range(len(alleventslines)):
     if descriptioneventpos == 0:
         description = alleventslines[i][12:]
     if endeventpos == 0:
-        festivalevents.append(FestivalEvent(summary, day, location, description, starttime, endtime, month))
+        festivalevents.append(FestivalEvent(summary, day, day, location, description, month))
 print("Count festival events", len(festivalevents))
 colwidth = 200
 rowheight = 20
