@@ -66,6 +66,7 @@ for i in range(len(alleventslines)):
         description = ""
         location = ""
         month = 0
+        year = 0
     if dtstarteventpos == 0:
         eventdtstartstr = alleventslines[i][8:]
         datevaluepos = alleventslines[i].find("VALUE=DATE:")
@@ -81,7 +82,6 @@ for i in range(len(alleventslines)):
         year = int(eventdtendstr[:4])
         month = int(eventdtendstr[4:6])
         endday = int(eventdtendstr[6:8])
-        print("endtime",eventdtendstr, year, month, endday)
     if summaryeventpos == 0:
         summary = alleventslines[i][8:]
     if descriptioneventpos == 0:
