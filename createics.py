@@ -75,14 +75,16 @@ with open(file_to_open, 'r') as file:
         count += 1
 print(count)
 c = Calendar()
-summary = "Rock Werchter"
-start = 2
-end= 5
-des = "Rock Werchter viert in 2026 weer een nieuwe editie. Het 4-daagse festival vind plaats op donderdag 2 t/m zondag 5 Juli in Belgie."
-loc = "Werchter"
-month = 7
-year = 2026
-addEvent(c, summary, start, end, des, loc, month, year)
+for i in range(count):
+    summary = festivaldata[i][0]
+    start = 2
+    end= 5
+    des = "todo"
+    #des = "Rock Werchter viert in 2026 weer een nieuwe editie. Het 4-daagse festival vind plaats op donderdag 2 t/m zondag 5 Juli in Belgie."
+    loc = festivaldata[i][1]
+    month = 7
+    year = 2026
+    addEvent(c, summary, start, end, des, loc, month, year)
 
 with open("Calendar/Festivals.ics", "w") as f:
     f.writelines(c)
