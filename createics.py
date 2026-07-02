@@ -77,10 +77,10 @@ print(count)
 c = Calendar()
 for i in range(count):
     summary = festivaldata[i][0]
+    loc = festivaldata[i][1]
+    des = festivaldata[i][2]
     start = 2
     end= 5
-    des = "todo"
-    loc = festivaldata[i][1]
     month = 7
     year = 2026
     addEvent(c, summary, start, end, des, loc, month, year)
