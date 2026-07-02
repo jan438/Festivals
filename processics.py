@@ -117,7 +117,7 @@ e.location = festivalevents[i].location
 e.begin = e.begin = datetime(
         year,
         month,
-        start,
+        day=start,
         hour=0,
         minute=0,
         second=0,
@@ -126,7 +126,7 @@ e.begin = e.begin = datetime(
 e.end = e.end = datetime(
         year,
         month,
-        end,
+        day=end,
         hour=0,
         minute=0,
         second=0,
