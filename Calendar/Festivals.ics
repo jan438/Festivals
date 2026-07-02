@@ -2,11 +2,11 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:ics.py - http://git.io/lLljaA
 BEGIN:VEVENT
-DESCRIPTION:des
-DTEND:20261214T000000Z
-LOCATION:loc
-DTSTART:20261212T000000Z
-SUMMARY:summary
-UID:fbb5a55f-4276-4377-85e2-9c192027c808@fbb5.org
+DESCRIPTION:Rock Werchter viert in 2026 weer een nieuwe editie. Het 4-daagse festival vind plaats op donderdag 2 t/m zondag 5 Juli in Belgie.
+DTEND:20260705T000000Z
+LOCATION:Werchter
+DTSTART:20260702T000000Z
+SUMMARY:Rock Werchter
+UID:b974f170-e3de-46df-9f68-91c7652baee5@b974.org
 END:VEVENT
 END:VCALENDAR

@@ -41,12 +41,12 @@ if sys.platform[0] == 'w':
     path = "C:/Users/janbo/OneDrive/Documents/GitHub/Festivals"
 os.chdir(path)
 c = Calendar()
-summary = "summary"
-start = 12
-end= 14
-des = "des"
-loc = "loc"
-month = 12
+summary = "Rock Werchter"
+start = 2
+end= 5
+des = "Rock Werchter viert in 2026 weer een nieuwe editie. Het 4-daagse festival vind plaats op donderdag 2 t/m zondag 5 Juli in Belgie."
+loc = "Werchter"
+month = 7
 year = 2026
 addFestivalEvent("summary", start, end, "des", "loc", month, year)
 e = Event()
