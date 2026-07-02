@@ -80,7 +80,6 @@ for i in range(count):
     start = 2
     end= 5
     des = "todo"
-    #des = "Rock Werchter viert in 2026 weer een nieuwe editie. Het 4-daagse festival vind plaats op donderdag 2 t/m zondag 5 Juli in Belgie."
     loc = festivaldata[i][1]
     month = 7
     year = 2026
