@@ -24,6 +24,31 @@ class FestivalEvent:
         
 def addFestivalEvent(summary, startday, endday, description, location, month, year):
     festivalevents.append(FestivalEvent(summary, startday, endday, description, location, month, year))
+    
+def addEvent(c, summary, startday, endday, description, location, month, year):
+    e = Event()
+    e.name = summary
+    e.description = des
+    e.location = loc
+    e.begin = e.begin = datetime(
+        year,
+        month,
+        day=start,
+        hour=0,
+        minute=0,
+        second=0,
+        tzinfo=None
+    )
+    e.end = e.end = datetime(
+        year,
+        month,
+        day=end,
+        hour=0,
+        minute=0,
+        second=0,
+        tzinfo=None
+    )
+    c.events.add(e)
 
 def converttimetztolocalclock(timetz):
     utc_string = timetz
@@ -48,30 +73,8 @@ des = "Rock Werchter viert in 2026 weer een nieuwe editie. Het 4-daagse festival
 loc = "Werchter"
 month = 7
 year = 2026
-addFestivalEvent("summary", start, end, "des", "loc", month, year)
-e = Event()
-e.name = summary
-e.description = des
-e.location = loc
-e.begin = e.begin = datetime(
-        year,
-        month,
-        day=start,
-        hour=0,
-        minute=0,
-        second=0,
-        tzinfo=None
-    )
-e.end = e.end = datetime(
-        year,
-        month,
-        day=end,
-        hour=0,
-        minute=0,
-        second=0,
-        tzinfo=None
-    )
-c.events.add(e)
+addEvent(c, "summary", start, end, "des", "loc", month, year)
+
 with open("Calendar/Festivals.ics", "w") as f:
     f.writelines(c)
     f.close()
