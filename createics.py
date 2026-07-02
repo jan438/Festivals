@@ -73,7 +73,7 @@ des = "Rock Werchter viert in 2026 weer een nieuwe editie. Het 4-daagse festival
 loc = "Werchter"
 month = 7
 year = 2026
-addEvent(c, "summary", start, end, "des", "loc", month, year)
+addEvent(c, summary, start, end, des, loc, month, year)
 
 with open("Calendar/Festivals.ics", "w") as f:
     f.writelines(c)
