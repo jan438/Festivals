@@ -134,6 +134,8 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
             c.drawString(leftmargin + col * colwidth + 200, bottommargin + row * rowheight, festivalevents[i].location)
             c.drawString(leftmargin + col * colwidth + 300, bottommargin + row * rowheight, festivalevents[i].description)
             c.drawString(leftmargin + col * colwidth + 400, bottommargin + row * rowheight, str(festivalevents[i].startday))
+            c.drawString(leftmargin + col * colwidth + 420, bottommargin + row * rowheight, str(festivalevents[i].endday))
+            c.drawString(leftmargin + col * colwidth + 440, bottommargin + row * rowheight, str(festivalevents[i].month))
             print(i, festivalevents[i].startday, festivalevents[i].endday)
             row -= 1
             count += 1
