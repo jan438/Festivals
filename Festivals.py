@@ -211,12 +211,11 @@ for i in range(len(alleventslines)):
             eventdtstartstr = alleventslines[i][19:]
         year = int(eventdtstartstr[:4])
         month = int(eventdtstartstr[4:6])
-        day = int(eventdtstartstr[6:8])
-        weekday = weekDay(year, month, day)
-        starttime = eventdtstartstr
+        startday = int(eventdtstartstr[6:8])
+        weekday = weekDay(year, month, startday)
     if dtendeventpos == 0:
         eventdtendstr = alleventslines[i][6:]
-        endtime = eventdtendstr[9:11] + ':' + eventdtendstr[11:13]
+        print(eventdtendstr)
     if summaryeventpos == 0:
         summary = alleventslines[i][8:]
     if locationeventpos == 0:
@@ -224,7 +223,7 @@ for i in range(len(alleventslines)):
     if descriptioneventpos == 0:
         description = alleventslines[i][12:]
     if endeventpos == 0:
-        festivalevents.append(FestivalEvent(summary, day, day, location, description, month))
+        festivalevents.append(FestivalEvent(summary, startday, day, location, description, month))
 print("Count festival events", len(festivalevents))
 colwidth = 200
 rowheight = 20
