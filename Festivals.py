@@ -219,7 +219,6 @@ for i in range(len(alleventslines)):
         month = int(eventdtendstr[4:6])
         endday = int(eventdtendstr[6:8])
         weekday = weekDay(year, month, endday)
-        print(eventdtendstr, endday)
     if summaryeventpos == 0:
         summary = alleventslines[i][8:]
     if locationeventpos == 0:
