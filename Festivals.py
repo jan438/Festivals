@@ -131,7 +131,8 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
             c.setFillColor(HexColor('#000000'))
             c.setFont(festivalfont, 12)
             c.drawString(leftmargin + col * colwidth + 50, bottommargin + row * rowheight, festivalevents[i].summary)
-            c.drawString(leftmargin + col * colwidth + 350, bottommargin + row * rowheight, festivalevents[i].location)
+            c.drawString(leftmargin + col * colwidth + 150, bottommargin + row * rowheight, festivalevents[i].location)
+            c.drawString(leftmargin + col * colwidth + 250, bottommargin + row * rowheight, festivalevents[i].description)
             print(i, festivalevents[i].startday, festivalevents[i].endday)
             row -= 1
             count += 1
