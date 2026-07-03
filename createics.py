@@ -85,7 +85,7 @@ for i in range(count):
     year = 2026
     addEvent(c, summary, start, end, des, loc, month, year)
 
-with open("Calendar/Festivals.ics", "w") as f:
+with open("Calendar/Festivals2026.ics", "w") as f:
     f.writelines(c)
     f.close()
 key = input("Wait")
