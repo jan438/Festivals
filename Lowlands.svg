@@ -19,7 +19,7 @@
       }
 
       .st4 {
-        fill: "#6e7ec3";
+        fill: red;
       }
 
       .st4, .st5, .st6, .st7, .st8, .st9, .st10, .st11, .st12, .st13, .st14, .st15, .st16, .st17, .st18, .st19 {
@@ -27,19 +27,19 @@
       }
 
       .st5 {
-        fill: "#6e98da";
+        fill: red;
       }
 
       .st6 {
-        fill: "#6eb7f4";
+        fill: red;
       }
 
       .st7 {
-        fill: url(#linear-gradient3);
+        fill: red;
       }
 
       .st8 {
-        fill: url(#linear-gradient5);
+        fill: red;
       }
 
       .st20 {
@@ -51,19 +51,19 @@
       }
 
       .st22 {
-        fill: #6eabea";
+        fill: red;
       }
 
       .st23 {
-        fill: ;
+        fill: red;
       }
 
       .st24 {
-        fill: url(#linear-gradient28);
+        fill: #6eb7f4;
       }
 
       .st25 {
-        fill: url(#linear-gradient18);
+        fill: #6c0056;
       }
 
       .st26 {
@@ -135,19 +135,19 @@
       }
 
       .st17 {
-        fill: url(#linear-gradient17);
+        fill: #6d5ba5;
       }
 
       .st18 {
-        fill: url(#linear-gradient13);
+        fill: #6c0056;
       }
 
       .st19 {
-        fill: url(#linear-gradient29);
+        fill: #6c0056;
       }
 
       .st35 {
-        fill: url(#linear-gradient);
+        fill: red;
       }
 
       .st36 {
