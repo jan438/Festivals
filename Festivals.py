@@ -136,7 +136,8 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
             c.drawString(leftmargin + col * colwidth + 400, bottommargin + row * rowheight, str(festivalevents[i].startday))
             c.drawString(leftmargin + col * colwidth + 420, bottommargin + row * rowheight, str(festivalevents[i].endday))
             c.drawString(leftmargin + col * colwidth + 440, bottommargin + row * rowheight, str(festivalevents[i].month))
-            print(i, festivalevents[i].summary, festivalevents[i].startday, festivalevents[i].endday)
+            if festivalevents[i].summary == "Lowlands":
+                 print(i, festivalevents[i].summary, festivalevents[i].startday, festivalevents[i].endday)
             row -= 1
             count += 1
             position -= 1
