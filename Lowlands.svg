@@ -3,23 +3,23 @@
   <defs>
     <style>
       .st0 {
-        fill: url(#linear-gradient2);
+        fill: "#6c0056";
       }
 
       .st1 {
-        fill: url(#linear-gradient6);
+        fill: "#6c0056";
       }
 
       .st2 {
-        fill: url(#linear-gradient8);
+        fill: "#6c3181";
       }
 
       .st3 {
-        fill: url(#linear-gradient4);
+        fill: "#6d5ba5";
       }
 
       .st4 {
-        fill: url(#linear-gradient1);
+        fill: "#6e7ec3";
       }
 
       .st4, .st5, .st6, .st7, .st8, .st9, .st10, .st11, .st12, .st13, .st14, .st15, .st16, .st17, .st18, .st19 {
@@ -27,11 +27,11 @@
       }
 
       .st5 {
-        fill: url(#linear-gradient9);
+        fill: "#6e98da";
       }
 
       .st6 {
-        fill: url(#linear-gradient7);
+        fill: "#6eb7f4";
       }
 
       .st7 {
@@ -51,11 +51,11 @@
       }
 
       .st22 {
-        fill: url(#linear-gradient30);
+        fill: #6eabea";
       }
 
       .st23 {
-        fill: url(#linear-gradient32);
+        fill: ;
       }
 
       .st24 {
