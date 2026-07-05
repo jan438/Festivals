@@ -11,21 +11,6 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
-  <defs
-     id="defs50">
-    <linearGradient
-       id="linearGradient14"
-       x1="136.2"
-       y1="79.8"
-       x2="194.5"
-       y2="79.8"
-       gradientUnits="userSpaceOnUse">
-      <stop
-         offset=".1"
-         stop-color="#fd911e"
-         id="stop13" />
-    </linearGradient>
-  </defs>
   <sodipodi:namedview
      id="namedview50"
      pagecolor="#ffffff"
