@@ -138,8 +138,14 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
             c.drawString(leftmargin + col * colwidth + 440, bottommargin + row * rowheight, str(festivalevents[i].month))
             if festivalevents[i].summary == "Lowlands":
                  scale_value = 1.0
-                 drawing = scaleSVG('SVG/Lowlands2.svg', float(scale_value))
+                 drawing = scaleSVG('SVG/Lowlands.svg', float(scale_value))
                  renderPDF.draw(drawing, c, 150, 475)
+                 scale_value = 1.0
+                 drawing = scaleSVG('SVG/rockwerchter.svg', float(scale_value))
+                 renderPDF.draw(drawing, c, 150, 175)
+                 scale_value = 1.0
+                 drawing = scaleSVG('SVG/pinkpop.svg', float(scale_value))
+                 renderPDF.draw(drawing, c, 150, 775)
                  print(i, festivalevents[i].summary, festivalevents[i].startday, festivalevents[i].endday)
             row -= 1
             count += 1
