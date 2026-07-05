@@ -3,19 +3,19 @@
   <defs>
     <style>
       .st0 {
-        fill: <linearGradient id="linear-gradient2" y1="128.6" y2="128.6" xlink:href="#linear-gradient1"></linearGradient>;
+        fill: <linearGradient id="linear-gradient2" y1="128.6" y2="128.6" xlink:href="#linear-gradient1"></linearGradient>
       }
 
       .st1 {
-        fill: <linearGradient id="linear-gradient6" x1="110" y1="182.8" x2="168.3" y2="182.8" xlink:href="#linear-gradient1"></linearGradient>;
+        fill: <linearGradient id="linear-gradient6" x1="110" y1="182.8" x2="168.3" y2="182.8" xlink:href="#linear-gradient1"></linearGradient>
       }
 
       .st2 {
-        fill: <linearGradient id="linear-gradient8" x1="97" y1="209.8" x2="155.3" y2="209.8" xlink:href="#linear-gradient1"></linearGradient>;
+        fill: <linearGradient id="linear-gradient8" x1="97" y1="209.8" x2="155.3" y2="209.8" xlink:href="#linear-gradient1"></linearGradient>
       }
 
       .st3 {
-        fill: <linearGradient id="linear-gradient4" x1="123.2" y1="155.6" x2="181.5" y2="155.6" xlink:href="#linear-gradient1"></linearGradient>;
+        fill: <linearGradient id="linear-gradient4" x1="123.2" y1="155.6" x2="181.5" y2="155.6" xlink:href="#linear-gradient1"></linearGradient>
       }
 
       .st4 {
