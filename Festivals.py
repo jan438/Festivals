@@ -140,7 +140,7 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
                  scale_value = 1.0
                  drawing = scaleSVG('SVG/Lowlands.svg', float(scale_value))
                  renderPDF.draw(drawing, c, 150, 475)
-                 scale_value = 1.0
+                 scale_value = 0.1
                  drawing = scaleSVG('SVG/rockwerchter.svg', float(scale_value))
                  renderPDF.draw(drawing, c, 150, 175)
                  scale_value = 1.0
