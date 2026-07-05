@@ -3,7 +3,7 @@
   <defs>
     <style>
       .st0 {
-        fill: url(#linear-gradient2);
+        fill: <linearGradient id="linear-gradient2" y1="128.6" y2="128.6" xlink:href="#linear-gradient1"></linearGradient>;
       }
 
       .st1 {
@@ -170,7 +170,6 @@
       <stop offset=".1" stop-color="#fd911e"></stop>
       <stop offset=".8" stop-color="#ffff80"></stop>
     </linearGradient>
-    <linearGradient id="linear-gradient2" y1="128.6" y2="128.6" xlink:href="#linear-gradient1"></linearGradient>
     <linearGradient id="linear-gradient3" x1="123.2" y1="106.8" x2="181.5" y2="106.8" xlink:href="#linear-gradient1"></linearGradient>
     <linearGradient id="linear-gradient4" x1="123.2" y1="155.6" x2="181.5" y2="155.6" xlink:href="#linear-gradient1"></linearGradient>
     <linearGradient id="linear-gradient5" x1="110" y1="134" x2="168.3" y2="134" xlink:href="#linear-gradient1"></linearGradient>
