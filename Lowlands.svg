@@ -11,7 +11,7 @@
       }
 
       .st2 {
-        fill: url(#linear-gradient8);
+        fill: <linearGradient id="linear-gradient8" x1="97" y1="209.8" x2="155.3" y2="209.8" xlink:href="#linear-gradient1"></linearGradient>;
       }
 
       .st3 {
@@ -174,7 +174,6 @@
     <linearGradient id="linear-gradient4" x1="123.2" y1="155.6" x2="181.5" y2="155.6" xlink:href="#linear-gradient1"></linearGradient>
     <linearGradient id="linear-gradient5" x1="110" y1="134" x2="168.3" y2="134" xlink:href="#linear-gradient1"></linearGradient>
     <linearGradient id="linear-gradient7" x1="97" y1="161" x2="155.3" y2="161" xlink:href="#linear-gradient1"></linearGradient>
-    <linearGradient id="linear-gradient8" x1="97" y1="209.8" x2="155.3" y2="209.8" xlink:href="#linear-gradient1"></linearGradient>
     <linearGradient id="linear-gradient9" x1="84" y1="187.9" x2="142.2" y2="187.9" xlink:href="#linear-gradient1"></linearGradient>
     <linearGradient id="linear-gradient10" x1="84" y1="236.7" x2="142.2" y2="236.7" xlink:href="#linear-gradient1"></linearGradient>
     <linearGradient id="linear-gradient11" x1="70.9" y1="214.9" x2="129.2" y2="214.9" xlink:href="#linear-gradient1"></linearGradient>
