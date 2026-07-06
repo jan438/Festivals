@@ -113,6 +113,44 @@ def drawbottomroundRect(c, x, y, w, h, a, color):
     p.lineTo(x, y + h + 0.5 * a)
     p.lineTo(x, y + 0.5 * a)
     c.drawPath(p, stroke = 0, fill = 1)
+    
+def octagon(c, x, y, s):
+    c.setFont(festivalfont, 7)
+    c.drawCentredString(x, y, "Octagon1")
+    angle = 67.5
+    p = c.beginPath()
+    p.moveTo(x, y)
+    dy1 = s * sin(radians(angle))
+    dx1 = sqrt(s**2 - dy1**2)
+    x = x + dx1
+    y = y + dy1
+    p.lineTo(x, y)
+    angle = 22.5
+    dy2 = s * sin(radians(angle))
+    dx2 = sqrt(s**2 - dy2**2)
+    x = x + dx2
+    y = y + dy2
+    p.lineTo(x, y)
+    x = x + dx2
+    y = y - dy2
+    p.lineTo(x, y)
+    x = x + dx1
+    y = y - dy1
+    p.lineTo(x, y)
+    x = x - dx1
+    y = y - dy1
+    p.lineTo(x, y)
+    x = x - dx2
+    y = y - dy2
+    p.lineTo(x, y)
+    x = x - dx2
+    y = y + dy2
+    p.lineTo(x, y)
+    x = x - dx1
+    y = y + dy1
+    p.lineTo(x, y)
+    p.close()
+    c.drawPath(p)
   
 def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
     position = 500
@@ -129,6 +167,7 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
             c.setFillColor(HexColor('#000000'))
             c.setFont(festivalfont, 12)
             if festivalevents[i].summary == "Lowlands":
+                 octagon(c, x=150, y=475, s=20)
                  scale_value = 0.6
                  drawing = scaleSVG('SVG/Lowlands.svg', float(scale_value))
                  renderPDF.draw(drawing, c, 150, 475)
