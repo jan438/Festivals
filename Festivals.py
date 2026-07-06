@@ -172,28 +172,6 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
                  drawing = scaleSVG('SVG/Lowlands.svg', float(scale_value))
                  renderPDF.draw(drawing, c, 150, 475)
                  c.drawString(150, 475, festivalevents[i].summary)
-                 break
-                 scale_value = 0.1
-                 drawing = scaleSVG('SVG/rockwerchter.svg', float(scale_value))
-                 renderPDF.draw(drawing, c, 150, 175)
-                 scale_value = 1.0
-                 drawing = scaleSVG('SVG/pinkpop.svg', float(scale_value))
-                 renderPDF.draw(drawing, c, 150, 775)
-                 scale_value = 0.3
-                 drawing = scaleSVG('SVG/roskilde.svg', float(scale_value))
-                 renderPDF.draw(drawing, c, 250, 775)
-                 scale_value = 0.3
-                 drawing = scaleSVG('SVG/coachella.svg', float(scale_value))
-                 renderPDF.draw(drawing, c, 250, 75)
-                 scale_value = 0.3
-                 drawing = scaleSVG('SVG/sziget.svg', float(scale_value))
-                 renderPDF.draw(drawing, c, 250, 175)
-                 scale_value = 0.3
-                 drawing = scaleSVG('SVG/glastonbury.svg', float(scale_value))
-                 renderPDF.draw(drawing, c, 250, 275)
-                 scale_value = 0.3
-                 drawing = scaleSVG('SVG/lollapalooza.svg', float(scale_value))
-                 renderPDF.draw(drawing, c, 250, 375)
                  print(i, festivalevents[i].summary, festivalevents[i].startday, festivalevents[i].endday)
             count += 1
             position -= 1
