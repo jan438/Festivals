@@ -146,6 +146,9 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
                  scale_value = 1.0
                  drawing = scaleSVG('SVG/pinkpop.svg', float(scale_value))
                  renderPDF.draw(drawing, c, 150, 775)
+                 scale_value = 1.0
+                 drawing = scaleSVG('SVG/roskilde.svg', float(scale_value))
+                 renderPDF.draw(drawing, c, 250, 775)
                  print(i, festivalevents[i].summary, festivalevents[i].startday, festivalevents[i].endday)
             row -= 1
             count += 1
