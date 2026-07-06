@@ -162,15 +162,14 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
         c.setTitle("Festivals 2026")
         count = 0
         for i in range(len(festivalevents)):
+            name = festivalevents[i].summary
             c.setFillColor(HexColor('#000000'))
             c.setFont(festivalfont, 12)
-            if festivalevents[i].summary == "Lowlands":
-                 octagon(c, x=150, y=475, s=20)
-                 scale_value = 0.6
-                 drawing = scaleSVG('SVG/Lowlands.svg', float(scale_value))
-                 renderPDF.draw(drawing, c, 150, 475)
-                 c.drawString(150, 475, festivalevents[i].summary)
-                 print(i, festivalevents[i].summary, festivalevents[i].startday, festivalevents[i].endday)
+            octagon(c, x=150, y=475, s=20)
+            scale_value = 0.6
+            drawing = scaleSVG('SVG/' + name + '.svg', float(scale_value))
+            renderPDF.draw(drawing, c, 150, 475)
+            c.drawString(150, 475, name)
             count += 1
             position -= 1
             if count == maxfestivalspage:
