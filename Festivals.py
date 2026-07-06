@@ -115,8 +115,6 @@ def drawbottomroundRect(c, x, y, w, h, a, color):
     c.drawPath(p, stroke = 0, fill = 1)
   
 def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
-    row = 25
-    col = 0
     position = 500
     try:
         c = canvas.Canvas(filename, pagesize=pagesize)
@@ -130,16 +128,12 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
         for i in range(len(festivalevents)):
             c.setFillColor(HexColor('#000000'))
             c.setFont(festivalfont, 12)
-            c.drawString(leftmargin + col * colwidth + 50, bottommargin + row * rowheight, festivalevents[i].summary)
-            c.drawString(leftmargin + col * colwidth + 200, bottommargin + row * rowheight, festivalevents[i].location)
-            c.drawString(leftmargin + col * colwidth + 300, bottommargin + row * rowheight, festivalevents[i].description)
-            c.drawString(leftmargin + col * colwidth + 400, bottommargin + row * rowheight, str(festivalevents[i].startday))
-            c.drawString(leftmargin + col * colwidth + 420, bottommargin + row * rowheight, str(festivalevents[i].endday))
-            c.drawString(leftmargin + col * colwidth + 440, bottommargin + row * rowheight, str(festivalevents[i].month))
             if festivalevents[i].summary == "Lowlands":
                  scale_value = 0.6
                  drawing = scaleSVG('SVG/Lowlands.svg', float(scale_value))
                  renderPDF.draw(drawing, c, 150, 475)
+                 c.drawString(150, 475, festivalevents[i].summary)
+                 break
                  scale_value = 0.1
                  drawing = scaleSVG('SVG/rockwerchter.svg', float(scale_value))
                  renderPDF.draw(drawing, c, 150, 175)
@@ -162,15 +156,12 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
                  drawing = scaleSVG('SVG/lollapalooza.svg', float(scale_value))
                  renderPDF.draw(drawing, c, 250, 375)
                  print(i, festivalevents[i].summary, festivalevents[i].startday, festivalevents[i].endday)
-            row -= 1
             count += 1
             position -= 1
             if count == maxfestivalspage:
                 c.showPage()
                 position = 500
                 count = 0
-                row = 25
-                col = 0
                 c.setFillColor(HexColor('#FECDE5'))
                 c.rect(0, 0, width, height, fill=1)
         c.showPage()
