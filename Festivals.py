@@ -115,8 +115,6 @@ def drawbottomroundRect(c, x, y, w, h, a, color):
     c.drawPath(p, stroke = 0, fill = 1)
     
 def octagon(c, x, y, s):
-    c.setFont(festivalfont, 7)
-    c.drawCentredString(x, y, "Octagon1")
     angle = 67.5
     p = c.beginPath()
     p.moveTo(x, y)
