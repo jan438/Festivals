@@ -33,6 +33,7 @@ class FestivalEvent:
 def lookupfestival(name):
     index = -1
     for l in range(len(festivaldata)):
+        print(festivaldata[l][0], name)
         if festivaldata[l][0] == name:
             index = l
     return index
