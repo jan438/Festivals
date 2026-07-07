@@ -180,7 +180,7 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
             renderPDF.draw(drawing, c, 150, 475)
             c.drawString(150, 475, name)
             index = lookupfestival(name)
-            print(index)
+            print("lookuped", index, festivaldata[index][0])
             count += 1
             position -= 1
             if count == maxfestivalspage:
@@ -210,9 +210,9 @@ with open(file_to_open, 'r') as file:
     count = 0
     for row in csvreader:
         festivaldata.append(row)
-        print("festivaldata", count, row)
+        #print("festivaldata", count, row)
         count += 1
-print(count)
+#print(count)
 file_to_open = "Data/template.csv"
 with open(file_to_open, 'r') as file:
     csvreader = csv.reader(file, delimiter = ';')
