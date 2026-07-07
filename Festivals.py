@@ -19,6 +19,7 @@ templatedata = []
 festivalevents = []
 maxfestivals = 10
 maxfestivalspage = 25
+index = -1
 
 class FestivalEvent:
     def __init__(self, summary, startday, endday, location, description, month):
@@ -28,6 +29,13 @@ class FestivalEvent:
         self.startday = startday
         self.endday = endday
         self.month = month
+        
+def lookupfestival(name):
+    index = -1
+    for l in range(len(festivaldata)):
+        if festivaldata[l][0] == name:
+            index = l
+    return index
         
 def weekDay(year, month, day):
     offset = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334]
@@ -170,6 +178,8 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
             drawing = scaleSVG('SVG/' + name + '.svg', float(scale_value))
             renderPDF.draw(drawing, c, 150, 475)
             c.drawString(150, 475, name)
+            lookupfestival(name)
+            print(index)
             count += 1
             position -= 1
             if count == maxfestivalspage:
