@@ -33,7 +33,6 @@ class FestivalEvent:
 def lookupfestival(name):
     index = -1
     for l in range(len(festivaldata)):
-        print(festivaldata[l][0], name)
         if festivaldata[l][0] == name:
             index = l
             break
@@ -180,7 +179,7 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
             drawing = scaleSVG('SVG/' + name + '.svg', float(scale_value))
             renderPDF.draw(drawing, c, 150, 475)
             c.drawString(150, 475, name)
-            lookupfestival(name)
+            index = lookupfestival(name)
             print(index)
             count += 1
             position -= 1
