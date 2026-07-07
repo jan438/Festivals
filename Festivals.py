@@ -178,7 +178,7 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
             festival_x = float(festivaldata[index][5])
             festival_y = float(festivaldata[index][6])
             festival_s = float(festivaldata[index][7])
-            octagon(c, x=festival_x, y=festival_y, s=festival_s)
+            octagon(c, x=festival_x, y=festival_y, s=5.00)
             drawing = scaleSVG('SVG/' + name + '.svg', festival_s)
             renderPDF.draw(drawing, c, festival_x, festival_y)
             c.drawString(festival_x, festival_y, name)
