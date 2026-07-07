@@ -36,6 +36,7 @@ def lookupfestival(name):
         print(festivaldata[l][0], name)
         if festivaldata[l][0] == name:
             index = l
+            break
     return index
         
 def weekDay(year, month, day):
