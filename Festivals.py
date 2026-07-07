@@ -199,6 +199,7 @@ with open(file_to_open, 'r') as file:
     count = 0
     for row in csvreader:
         festivaldata.append(row)
+        print("festivaldata", count, row)
         count += 1
 print(count)
 file_to_open = "Data/template.csv"
