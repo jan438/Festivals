@@ -174,15 +174,14 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
             name = festivalevents[i].summary
             c.setFillColor(HexColor('#000000'))
             c.setFont(festivalfont, 12)
-            octagon(c, x=150, y=475, s=20)
-            scale_value = 0.6
-            drawing = scaleSVG('SVG/' + name + '.svg', float(scale_value))
-            renderPDF.draw(drawing, c, 150, 475)
-            c.drawString(150, 475, name)
             index = lookupfestival(name)
-            festival_x = festivaldata[index][5]
-            festival_y = festivaldata[index][6]
-            festival_s = festivaldata[index][7]
+            festival_x = float(festivaldata[index][5])
+            festival_y = float(festivaldata[index][6])
+            festival_s = float(festivaldata[index][7])
+            octagon(c, x=festival_x, y=festival_y, s=festival_s)
+            drawing = scaleSVG('SVG/' + name + '.svg', festival_s)
+            renderPDF.draw(drawing, c, festival_x, festival_y)
+            c.drawString(festival_x, festival_y, name)
             count += 1
             position -= 1
             if count == maxfestivalspage:
