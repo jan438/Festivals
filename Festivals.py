@@ -180,7 +180,9 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
             renderPDF.draw(drawing, c, 150, 475)
             c.drawString(150, 475, name)
             index = lookupfestival(name)
-            print("lookuped", index, festivaldata[index][0])
+            festival_x = festivaldata[index][5]
+            festival_y = festivaldata[index][6]
+            festival_s = festivaldata[index][7]
             count += 1
             position -= 1
             if count == maxfestivalspage:
