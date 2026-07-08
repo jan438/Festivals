@@ -182,6 +182,7 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
             octagon(c, x=festival_x, y=festival_y, s=50.0)
             drawing = scaleSVG('SVG/' + name + '.svg', festival_s)
             renderPDF.draw(drawing, c, festival_x, festival_y)
+            c.setFillColor(black)
             c.drawString(festival_x, festival_y, name)
             count += 1
             position -= 1
