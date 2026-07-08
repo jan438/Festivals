@@ -8,8 +8,7 @@ from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfbase.pdfmetrics import registerFontFamily
 from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 from reportlab.graphics import renderPDF
-from reportlab.lib.colors import yellow, green, red, black, HexColor
-from reportlab.lib.colors import tan, black, green
+from reportlab.lib.colors import yellow, green, red, blue, black, tan, HexColor
 from reportlab.lib.units import inch, cm, mm
 from math import pi, cos, sin, radians, sqrt
 
@@ -159,6 +158,36 @@ def octagon1(c, x, y, s):
     p.lineTo(x, y)
     p.close()
     c.drawPath(p, fill=1)
+    
+def octagon2(c, x, y, s):
+    c.setFillColor(blue)
+    angle = 45
+    p = c.beginPath()
+    p.moveTo(x, y)
+    y = y + s
+    p.lineTo(x, y)
+    dy1 = s * sin(radians(angle))
+    dx1 = sqrt(s**2 - dy1**2)
+    x = x + dx1
+    y = y + dy1
+    p.lineTo(x, y)
+    x = x + s
+    p.lineTo(x, y)
+    x = x + dx1
+    y = y - dy1
+    p.lineTo(x, y)
+    y = y - s
+    p.lineTo(x, y)
+    x = x - dx1
+    y = y - dy1
+    p.lineTo(x, y)
+    x = x - s
+    p.lineTo(x, y)
+    x = x - dx1
+    y = y + dy1
+    p.lineTo(x, y)
+    p.close()
+    c.drawPath(p, fill=1)
   
 def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
     position = 500
@@ -179,7 +208,7 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
             festival_x = float(festivaldata[index][5])
             festival_y = float(festivaldata[index][6])
             festival_s = float(festivaldata[index][7])
-            octagon1(c, x=festival_x, y=festival_y, s=100.0)
+            octagon2(c, x=festival_x, y=festival_y, s=100.0)
             drawing = scaleSVG('SVG/' + name + '.svg', festival_s)
             renderPDF.draw(drawing, c, festival_x, festival_y)
             c.setFillColor(black)
