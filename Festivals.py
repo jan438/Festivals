@@ -122,44 +122,7 @@ def drawbottomroundRect(c, x, y, w, h, a, color):
     p.lineTo(x, y + 0.5 * a)
     c.drawPath(p, stroke = 0, fill = 1)
     
-def octagon1(c, x, y, s):
-    c.setFillColor(red)
-    angle = 67.5
-    p = c.beginPath()
-    p.moveTo(x, y)
-    dy1 = s * sin(radians(angle))
-    dx1 = sqrt(s**2 - dy1**2)
-    x = x + dx1
-    y = y + dy1
-    p.lineTo(x, y)
-    angle = 22.5
-    dy2 = s * sin(radians(angle))
-    dx2 = sqrt(s**2 - dy2**2)
-    x = x + dx2
-    y = y + dy2
-    p.lineTo(x, y)
-    x = x + dx2
-    y = y - dy2
-    p.lineTo(x, y)
-    x = x + dx1
-    y = y - dy1
-    p.lineTo(x, y)
-    x = x - dx1
-    y = y - dy1
-    p.lineTo(x, y)
-    x = x - dx2
-    y = y - dy2
-    p.lineTo(x, y)
-    x = x - dx2
-    y = y + dy2
-    p.lineTo(x, y)
-    x = x - dx1
-    y = y + dy1
-    p.lineTo(x, y)
-    p.close()
-    c.drawPath(p, fill=1)
-    
-def octagon2(c, x, y, s):
+def octagon(c, x, y, s):
     c.setFillColor(blue)
     angle = 45
     p = c.beginPath()
@@ -207,12 +170,10 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
             c.setFillColor(HexColor('#000000'))
             c.setFont(festivalfont, 12)
             index = lookupfestival(name)
-            #festival_x = float(festivaldata[index][5])
-            #festival_y = float(festivaldata[index][6])
             festival_x = col * 200
             festival_y = row * 300
             festival_s = float(festivaldata[index][7])
-            octagon2(c, x=festival_x, y=festival_y, s=100.0)
+            octagon(c, x=festival_x, y=festival_y, s=100.0)
             drawing = scaleSVG('SVG/' + name + '.svg', festival_s)
             renderPDF.draw(drawing, c, festival_x, festival_y)
             c.setFillColor(black)
