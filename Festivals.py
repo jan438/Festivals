@@ -124,6 +124,8 @@ def drawbottomroundRect(c, x, y, w, h, a, color):
     c.drawPath(p, stroke = 0, fill = 1)
     
 def octagon(c, x, y, s):
+    c.setLineWidth(5)
+    c.setLineCap(1)
     c.setStrokeColor(yellow)
     c.setFillColor(blue)
     angle = 45
