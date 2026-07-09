@@ -191,6 +191,8 @@ def octagon2(c, x, y, s):
   
 def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
     position = 500
+    row = 2
+    col = 0
     try:
         c = canvas.Canvas(filename, pagesize=pagesize)
         c.setTitle(title)
@@ -205,8 +207,10 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
             c.setFillColor(HexColor('#000000'))
             c.setFont(festivalfont, 12)
             index = lookupfestival(name)
-            festival_x = float(festivaldata[index][5])
-            festival_y = float(festivaldata[index][6])
+            #festival_x = float(festivaldata[index][5])
+            #festival_y = float(festivaldata[index][6])
+            festival_x = col * 200
+            festival_y = row * 300
             festival_s = float(festivaldata[index][7])
             octagon2(c, x=festival_x, y=festival_y, s=100.0)
             drawing = scaleSVG('SVG/' + name + '.svg', festival_s)
@@ -214,6 +218,10 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
             c.setFillColor(black)
             c.drawString(festival_x, festival_y, name)
             count += 1
+            col += 1
+            if col == 3:
+                col = 0
+                row -= 1
             position -= 1
             if count == maxfestivalspage:
                 c.showPage()
@@ -306,12 +314,6 @@ for i in range(len(alleventslines)):
     if endeventpos == 0:
         festivalevents.append(FestivalEvent(summary, startday, endday, location, description, month))
 print("Count festival events", len(festivalevents))
-row = 0
-col = 0
-colwidth = 200
-rowheight = 20
-leftmargin = 10
-bottommargin = 100
 variable_dict = {}
 for i in range(len(templatedata)):
     variable_dict[templatedata[i][0]] = float(templatedata[i][1])
