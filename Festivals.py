@@ -306,6 +306,8 @@ for i in range(len(alleventslines)):
     if endeventpos == 0:
         festivalevents.append(FestivalEvent(summary, startday, endday, location, description, month))
 print("Count festival events", len(festivalevents))
+row = 0
+col = 0
 colwidth = 200
 rowheight = 20
 leftmargin = 10
