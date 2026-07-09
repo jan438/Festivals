@@ -19,7 +19,7 @@ festivalevents = []
 maxfestivalspage = 9
 index = -1
 bottommargin = 100
-leftmargin = 100
+leftmargin = 30
 side_octogon = 100.0
 
 class FestivalEvent:
@@ -177,7 +177,7 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
             c.setFont(festivalfont, 12)
             index = lookupfestival(name)
             festival_x = leftmargin + col * 241.42
-            festival_y = bottommargin + row * 300
+            festival_y = bottommargin + row * 241.42
             festival_s = float(festivaldata[index][7])
             octagon(c, x=festival_x, y=festival_y, s=side_octogon)
             drawing = scaleSVG('SVG/' + name + '.svg', festival_s)
