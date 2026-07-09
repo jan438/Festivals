@@ -18,8 +18,8 @@ templatedata = []
 festivalevents = []
 maxfestivalspage = 9
 index = -1
-bottommargin = 100
-leftmargin = 50
+bottommargin = 200
+leftmargin = 60
 side_octogon = 100.0
 
 class FestivalEvent:
