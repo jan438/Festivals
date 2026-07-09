@@ -20,7 +20,7 @@ maxfestivalspage = 9
 index = -1
 bottommargin = 100
 leftmargin = 100
-side_octogon = 110.0
+side_octogon = 100.0
 
 class FestivalEvent:
     def __init__(self, summary, startday, endday, location, description, month):
@@ -136,6 +136,7 @@ def octagon(c, x, y, s):
     p.lineTo(x, y)
     dy1 = s * sin(radians(angle))
     dx1 = sqrt(s**2 - dy1**2)
+    print("s", s, "dx", dx1)
     x = x + dx1
     y = y + dy1
     p.lineTo(x, y)
@@ -175,7 +176,7 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
             c.setFillColor(HexColor('#000000'))
             c.setFont(festivalfont, 12)
             index = lookupfestival(name)
-            festival_x = leftmargin + col * 2 * side_octogon
+            festival_x = leftmargin + col * 241.42
             festival_y = bottommargin + row * 300
             festival_s = float(festivaldata[index][7])
             octagon(c, x=festival_x, y=festival_y, s=side_octogon)
