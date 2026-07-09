@@ -175,7 +175,7 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
             c.setFillColor(HexColor('#000000'))
             c.setFont(festivalfont, 12)
             index = lookupfestival(name)
-            festival_x = leftmargin + col * 200
+            festival_x = leftmargin + col * 2 * side_octogon
             festival_y = bottommargin + row * 300
             festival_s = float(festivaldata[index][7])
             octagon(c, x=festival_x, y=festival_y, s=side_octogon)

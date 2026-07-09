@@ -1,3 +1,6 @@
 name;location;description;startday;endday;dx;dy;scale;
 
 side_octogon = 110.0 
+radius_octogon = 2 * side_octogon ?    
+dy1 = s * sin(radians(angle))
+dx1 = sqrt(s**2 - dy1**2)
