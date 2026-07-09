@@ -19,7 +19,7 @@ festivalevents = []
 maxfestivalspage = 9
 index = -1
 bottommargin = 100
-leftmargin = 30
+leftmargin = 50
 side_octogon = 100.0
 
 class FestivalEvent:
