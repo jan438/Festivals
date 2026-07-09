@@ -1,1 +1,3 @@
-name;location;description;startday;endday;x;y;scale;
+name;location;description;startday;endday;dx;dy;scale;
+
+side_octogon = 110.0 

@@ -20,6 +20,7 @@ maxfestivalspage = 9
 index = -1
 bottommargin = 100
 leftmargin = 100
+side_octogon = 110.0
 
 class FestivalEvent:
     def __init__(self, summary, startday, endday, location, description, month):
@@ -177,7 +178,7 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
             festival_x = leftmargin + col * 200
             festival_y = bottommargin + row * 300
             festival_s = float(festivaldata[index][7])
-            octagon(c, x=festival_x, y=festival_y, s=100.0)
+            octagon(c, x=festival_x, y=festival_y, s=side_octogon)
             drawing = scaleSVG('SVG/' + name + '.svg', festival_s)
             renderPDF.draw(drawing, c, festival_x, festival_y)
             c.setFillColor(black)
