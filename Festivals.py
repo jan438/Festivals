@@ -136,7 +136,6 @@ def octagon(c, x, y, s):
     p.lineTo(x, y)
     dy1 = s * sin(radians(angle))
     dx1 = sqrt(s**2 - dy1**2)
-    print("s", s, "dx", dx1)
     x = x + dx1
     y = y + dy1
     p.lineTo(x, y)
