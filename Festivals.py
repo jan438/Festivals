@@ -240,17 +240,17 @@ file_to_open = "Data/FestivalsInternational.csv"
 with open(file_to_open, 'r') as file:
     csvreader = csv.reader(file, delimiter = ';')
     count = 0
-    for row in csvreader:
-        festivaldata.append(row)
-        #print("festivaldata", count, row)
+    for r in csvreader:
+        festivaldata.append(r)
+        #print("festivaldata", count, r)
         count += 1
 #print(count)
 file_to_open = "Data/template.csv"
 with open(file_to_open, 'r') as file:
     csvreader = csv.reader(file, delimiter = ';')
     count = 0
-    for row in csvreader:
-        templatedata.append(row)
+    for r in csvreader:
+        templatedata.append(r)
         count += 1
 print(count)
 festivalcal = "Calendar/Festivals2026.ics"
