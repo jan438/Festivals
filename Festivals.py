@@ -124,6 +124,7 @@ def drawbottomroundRect(c, x, y, w, h, a, color):
     c.drawPath(p, stroke = 0, fill = 1)
     
 def octagon(c, x, y, s):
+    c.setStrokeColor(yellow)
     c.setFillColor(blue)
     angle = 45
     p = c.beginPath()
@@ -151,7 +152,7 @@ def octagon(c, x, y, s):
     y = y + dy1
     p.lineTo(x, y)
     p.close()
-    c.drawPath(p, fill=1)
+    c.drawPath(p, fill=1, stroke=1)
   
 def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
     position = 500
