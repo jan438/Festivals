@@ -3,4 +3,4 @@ name;location;description;startday;endday;dx;dy;scale;
 side_octogon = 110.0
 angle = 45
 dy = side_octogon * sin(radians(angle))
-radius_octogon =  side_octogon + 2 * sqrt(side_octogon**2 - dy**2) = 241.42
+radius_octogon =  side_octogon + 2 * sqrt(side_octogon**2 - dy**2) = 246.42
