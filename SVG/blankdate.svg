@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   version="1.1"
+   id="tear_off_calendar"
+   x="0px"
+   y="0px"
+   viewBox="0 0 128 128"
+   style="enable-background:new 0 0 128 128;"
+   xml:space="preserve"
+   sodipodi:docname="emoji_u1f4c6.svg"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs16" /><sodipodi:namedview
+   id="namedview16"
+   pagecolor="#ffffff"
+   bordercolor="#000000"
+   borderopacity="0.25"
+   inkscape:showpageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#d1d1d1"
+   inkscape:zoom="5.359375"
+   inkscape:cx="63.906706"
+   inkscape:cy="64"
+   inkscape:window-width="1210"
+   inkscape:window-height="933"
+   inkscape:window-x="0"
+   inkscape:window-y="0"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="g16" />
+<g
+   id="g16">
+	<path
+   style="fill:#BDBDBD;"
+   d="M6.81,45.78v64.74c0,3.12,2.9,5.21,6.32,7.61c3.9,2.74,8.48,5.25,10.17,5.25l93.55,0.62   c2.4,0,4.34-2.94,4.34-5.34V45.78H6.81z"
+   id="path1" />
+	<linearGradient
+   id="SVGID_1_"
+   gradientUnits="userSpaceOnUse"
+   x1="117.0497"
+   y1="74.7041"
+   x2="117.0497"
+   y2="114.6335">
+		<stop
+   offset="0.3374"
+   style="stop-color:#616161"
+   id="stop1" />
+		<stop
+   offset="1"
+   style="stop-color:#616161;stop-opacity:0"
+   id="stop2" />
+	</linearGradient>
+	<polygon
+   style="opacity:0.29;fill:url(#SVGID_1_);"
+   points="121.19,118.66 112.91,110.15 112.91,43.92 121.19,43.73  "
+   id="polygon2" />
+	<path
+   style="fill:#C62828;"
+   d="M121.19,51.32l-6.46-4.05L104.62,4c0,0,0.6,0,5.44,0c9.65,0,11.13,5.57,11.13,7.47V51.32z"
+   id="path2" />
+	<path
+   style="fill:#FAFAFA;"
+   d="M9.75,45.78v62.68c0,2.7,2.19,4.88,4.88,4.88h94.85c2.7,0,5.22-2.01,5.22-4.71v-5.24V45.78H9.75z"
+   id="path3" />
+	<path
+   style="fill:#F44336;"
+   d="M114.73,47.27H6.81V9.75C6.81,6.57,9.38,4,12.56,4h96.59c3.19,0,5.77,2.59,5.75,5.78L114.73,47.27z"
+   id="path4" />
+	
+	
+	<polygon
+   style="opacity:0.29;fill:#616161;"
+   points="114.7,52.24 9.75,52.35 9.75,47.27 114.7,47.27  "
+   id="polygon10" />
+	<g
+   id="g14">
+		<g
+   id="g11">
+			<circle
+   style="fill:#606060;"
+   cx="22.8"
+   cy="17.74"
+   r="7.1"
+   id="circle10" />
+			<circle
+   style="fill:#94D1E0;"
+   cx="20.44"
+   cy="15.39"
+   r="7.1"
+   id="circle11" />
+			<path
+   style="fill:#C9EFF2;"
+   d="M21.05,12.45c-0.16,0.85-0.7,1.57-1.32,2.18c-0.74,0.72-1.61,1.32-2.59,1.65     c-0.58,0.2-1.25,0.28-1.76-0.06c-1.41-0.95-0.28-4.52,0.79-5.47C17.8,9.31,21.61,9.58,21.05,12.45z"
+   id="path11" />
+		</g>
+		<g
+   id="g13">
+			<circle
+   style="fill:#606060;"
+   cx="101.3"
+   cy="17.74"
+   r="7.1"
+   id="circle12" />
+			<circle
+   style="fill:#94D1E0;"
+   cx="98.95"
+   cy="15.39"
+   r="7.1"
+   id="circle13" />
+			<path
+   style="fill:#C9EFF2;"
+   d="M99.56,12.45c-0.16,0.85-0.7,1.57-1.32,2.18c-0.74,0.72-1.61,1.32-2.59,1.65     c-0.58,0.2-1.25,0.28-1.76-0.06c-1.41-0.95-0.28-4.52,0.79-5.47C96.31,9.31,100.11,9.58,99.56,12.45z"
+   id="path13" />
+		</g>
+	</g>
+	<g
+   id="g15">
+		<path
+   style="fill:#757575;"
+   d="M103.71,118.74c-3.18,0.39-6.36,0.56-9.54,0.84c-3.18,0.2-6.36,0.38-9.54,0.5    c-3.18,0.16-6.36,0.19-9.54,0.29l-9.54,0.09l-9.54-0.1c-3.18-0.09-6.36-0.13-9.54-0.29c-3.18-0.12-6.36-0.3-9.54-0.5    c-3.18-0.28-6.36-0.45-9.54-0.84v-0.2l38.15-0.1l38.15,0.1V118.74z"
+   id="path14" />
+	</g>
+	<path
+   style="fill:#757575;"
+   d="M84.5,113.34h25.32c2.7,0,4.88-2.19,4.88-4.88l0-18.43c0,0-5.5,7.64-13.83,13.92   S84.5,113.34,84.5,113.34z"
+   id="path15" />
+	<path
+   style="fill:#BDBDBD;"
+   d="M107.17,104.31c7.72-9.09,7.53-14.27,7.53-14.27s-2.23,3.14-9.24,3.85   c-2.47,0.25-6.01-0.7-8.62-1.57c-1.57-0.52-3.2,0.6-3.25,2.24c-0.07,2.11-0.42,5.07-1.55,8.59c-1.88,5.88-7.55,10.2-7.55,10.2   S98.54,114.46,107.17,104.31z"
+   id="path16" />
+</g>
+</svg>
