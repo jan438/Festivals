@@ -125,7 +125,7 @@ def drawbottomroundRect(c, x, y, w, h, a, color):
     c.drawPath(p, stroke = 0, fill = 1)
     
 def octagon(c, x, y, s):
-    c.setLineWidth(5)
+    c.setLineWidth(10)
     c.setLineCap(1)
     c.setStrokeColor(HexColor('#aaaa00'))
     c.setFillColor(HexColor('#ffaa00'))
@@ -175,8 +175,8 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
             c.setFillColor(HexColor('#000000'))
             c.setFont(festivalfont, 12)
             index = lookupfestival(name)
-            festival_x = leftmargin + col * 241.42
-            festival_y = bottommargin + row * 241.42
+            festival_x = leftmargin + col * 246.42
+            festival_y = bottommargin + row * 246.42
             festival_s = float(festivaldata[index][7])
             octagon(c, x=festival_x, y=festival_y, s=side_octogon)
             drawing = scaleSVG('SVG/' + name + '.svg', festival_s)
