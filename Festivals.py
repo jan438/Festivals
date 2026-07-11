@@ -206,7 +206,8 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
                 row -= 1
             position -= 1
             if count == maxfestivalspage:
-                c.showPage()
+                if i <= len(festivalevents):
+                    c.showPage()
                 position = 500
                 count = 0
                 c.setFillColor(HexColor('#FECDE5'))
