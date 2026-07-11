@@ -207,6 +207,7 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
             position -= 1
             if count == maxfestivalspage:
                 if i <= len(festivalevents):
+                    print(i, len(festivalevents) - 1)
                     c.showPage()
                 position = 500
                 count = 0
