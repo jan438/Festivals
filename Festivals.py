@@ -170,7 +170,9 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
         c.setFillColor(HexColor('#FECDE5'))
         c.rect(0, 0, width, height, fill=1)
         #cadre(c, pagesize)
-        c.setTitle("Festivals 2026")
+        c.setFillColor(HexColor('#aa557f'))
+        c.rect(200, 200, width - 400, height - 400, fill=1)
+        c.setTitle("Festivals 2027")
         count = 0
         for i in range(len(festivalevents)):
             name = festivalevents[i].summary
