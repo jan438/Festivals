@@ -26,14 +26,14 @@ class FestivalEvent:
 def addFestivalEvent(summary, startday, endday, description, location, month, year):
     festivalevents.append(FestivalEvent(summary, startday, endday, description, location, month, year))
     
-def addEvent(c, summary, startday, endday, description, location, month, year):
+def addEvent(c, summary, startday, endday, description, location, startmonth, endmonth, year):
     e = Event()
     e.name = summary
     e.description = des
     e.location = loc
     e.begin = e.begin = datetime(
         year,
-        month,
+        month=startmonth,
         day=startday,
         hour=0,
         minute=0,
@@ -42,7 +42,7 @@ def addEvent(c, summary, startday, endday, description, location, month, year):
     )
     e.end = e.end = datetime(
         year,
-        month,
+        month=endmonth,
         day=endday,
         hour=0,
         minute=0,
@@ -82,11 +82,12 @@ for i in range(count):
     startdate = festivaldata[i][3]
     enddate = festivaldata[i][4]
     startday = int(startdate[0:2])
+    startmonth = int(startdate[3:5])
     endday = int(enddate[0:2])
-    month = 7
-    year = 2026
-    print(summary, startdate, enddate, startday, endday)
-    addEvent(c, summary, startday, endday, des, loc, month, year)
+    endmonth = int(enddate[3:5])
+    year = 2027
+    print(summary, startdate, enddate, startday, startmonth, endday, endmonth)
+    addEvent(c, summary, startday, endday, des, loc, startmonth, endmonth, year)
 
 with open("Calendar/Festivals2026.ics", "w") as f:
     f.writelines(c)
