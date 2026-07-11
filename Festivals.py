@@ -243,7 +243,7 @@ with open(file_to_open, 'r') as file:
         templatedata.append(r)
         count += 1
 print(count)
-festivalcal = "Calendar/Festivals2026.ics"
+festivalcal = "Calendar/Festivals2027.ics"
 in_file = open(os.path.join(path, festivalcal), 'r')
 count = 0
 lastpos = 0
