@@ -174,7 +174,6 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
         for i in range(len(festivalevents)):
             name = festivalevents[i].summary
             c.setFillColor(HexColor('#000000'))
-            c.setFont(festivalfont, 12)
             index = lookupfestival(name)
             festival_x = leftmargin + col * 246.42
             festival_y = bottommargin + row * 246.42
@@ -185,8 +184,11 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
             drawing = scaleSVG('SVG/blankdate.svg', 0.45)
             renderPDF.draw(drawing, c, festival_x + 70, festival_y + 110)
             renderPDF.draw(drawing, c, festival_x + 120, festival_y - 70)
-            print(festivalevents[i].summary, festivalevents[i].startday)
             c.setFillColor(black)
+            c.setFont(festivalfont, 25)
+            c.drawString(festival_x + 75, festival_y + 115, str(startday))
+            c.setFillColor(black)
+            c.setFont(festivalfont, 25)
             c.drawString(festival_x, festival_y, name)
             count += 1
             col += 1
