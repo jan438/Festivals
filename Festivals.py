@@ -186,7 +186,7 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
             renderPDF.draw(drawing, c, festival_x + 120, festival_y - 70)
             c.setFillColor(black)
             c.setFont(festivalfont, 25)
-            c.drawString(festival_x + 75, festival_y + 115, str(startday))
+            c.drawString(festival_x + 75, festival_y + 115, str(festivalevents[i].startday))
             c.setFillColor(black)
             c.setFont(festivalfont, 25)
             c.drawString(festival_x, festival_y, name)
