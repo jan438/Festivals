@@ -21,6 +21,7 @@ index = -1
 bottommargin = 200
 leftmargin = 60
 side_octogon = 100.0
+monthnames = ["Jan","Feb","Mrt","Apr","Mei","Jun","Jul","Aug","Sep","Okt","Nov","Dec"]
 
 class FestivalEvent:
     def __init__(self, summary, startday, endday, location, description, startmonth, endmonth):
@@ -187,8 +188,7 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
             c.setFillColor(black)
             c.setFont(festivalfont, 25)
             c.drawString(festival_x + 75, festival_y + 115, str(festivalevents[i].startday))
-            c.drawString(festival_x + 85, festival_y + 115, "-")
-            c.drawString(festival_x + 90, festival_y + 115, str(festivalevents[i].startmonth))
+            c.drawString(festival_x + 100, festival_y + 115, monthnames[festivalevents[i].startmonth-1])
             c.setFillColor(black)
             c.setFont(festivalfont, 25)
             c.drawString(festival_x, festival_y, name)
