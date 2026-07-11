@@ -79,6 +79,9 @@ for i in range(count):
     summary = festivaldata[i][0]
     loc = festivaldata[i][1]
     des = festivaldata[i][2]
+    startdate = festivaldata[i][3]
+    enddate = festivaldata[i][4]
+    print(summary, startdate, enddate)
     start = 2
     end= 5
     month = 7
