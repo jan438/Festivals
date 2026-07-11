@@ -23,13 +23,14 @@ leftmargin = 60
 side_octogon = 100.0
 
 class FestivalEvent:
-    def __init__(self, summary, startday, endday, location, description, month):
+    def __init__(self, summary, startday, endday, location, description, startmonth, endmonth):
         self.summary = summary
         self.location = location
         self.description = description
         self.startday = startday
         self.endday = endday
-        self.month = month
+        self.startmonth = startmonth
+        self.endmonth = endmonth
         
 def lookupfestival(name):
     index = -1
@@ -184,6 +185,7 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
             drawing = scaleSVG('SVG/blankdate.svg', 0.45)
             renderPDF.draw(drawing, c, festival_x + 70, festival_y + 110)
             renderPDF.draw(drawing, c, festival_x + 120, festival_y - 70)
+            print(festivalevents[i].summary, festivalevents[i].startday)
             c.setFillColor(black)
             c.drawString(festival_x, festival_y, name)
             count += 1
@@ -265,13 +267,13 @@ for i in range(len(alleventslines)):
         if datevaluepos == 8:
             eventdtstartstr = alleventslines[i][19:]
         year = int(eventdtstartstr[:4])
-        month = int(eventdtstartstr[4:6])
+        startmonth = int(eventdtstartstr[4:6])
         startday = int(eventdtstartstr[6:8])
         weekday = weekDay(year, month, startday)
     if dtendeventpos == 0:
         eventdtendstr = alleventslines[i][6:]
         year = int(eventdtendstr[:4])
-        month = int(eventdtendstr[4:6])
+        endmonth = int(eventdtendstr[4:6])
         endday = int(eventdtendstr[6:8])
         weekday = weekDay(year, month, endday)
     if summaryeventpos == 0:
@@ -281,7 +283,7 @@ for i in range(len(alleventslines)):
     if descriptioneventpos == 0:
         description = alleventslines[i][12:]
     if endeventpos == 0:
-        festivalevents.append(FestivalEvent(summary, startday, endday, location, description, month))
+        festivalevents.append(FestivalEvent(summary, startday, endday, location, description, startmonth, endmonth))
 print("Count festival events", len(festivalevents))
 variable_dict = {}
 for i in range(len(templatedata)):
