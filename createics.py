@@ -34,7 +34,7 @@ def addEvent(c, summary, startday, endday, description, location, month, year):
     e.begin = e.begin = datetime(
         year,
         month,
-        day=start,
+        day=startday,
         hour=0,
         minute=0,
         second=0,
@@ -43,7 +43,7 @@ def addEvent(c, summary, startday, endday, description, location, month, year):
     e.end = e.end = datetime(
         year,
         month,
-        day=end,
+        day=endday,
         hour=0,
         minute=0,
         second=0,
@@ -81,12 +81,12 @@ for i in range(count):
     des = festivaldata[i][2]
     startdate = festivaldata[i][3]
     enddate = festivaldata[i][4]
-    print(summary, startdate, enddate)
-    start = 2
-    end= 5
+    startday = int(startdate[0:2])
+    endday = int(enddate[0:2])
     month = 7
     year = 2026
-    addEvent(c, summary, start, end, des, loc, month, year)
+    print(summary, startdate, enddate, startday, endday)
+    addEvent(c, summary, startday, endday, des, loc, month, year)
 
 with open("Calendar/Festivals2026.ics", "w") as f:
     f.writelines(c)
