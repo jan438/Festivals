@@ -23,6 +23,7 @@ leftmargin = 60
 side_octogon = 100.0
 monthnames = ["Jan","Feb","Mrt","Apr","Mei","Jun","Jul","Aug","Sep","Okt","Nov","Dec"]
 color1 = '#FECDE5'
+color2 = '#aa557f'
 
 class FestivalEvent:
     def __init__(self, summary, startday, endday, location, description, startmonth, endmonth):
@@ -171,7 +172,7 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
         c.setFillColor(HexColor(color1))
         c.rect(0, 0, width, height, fill=1)
         #cadre(c, pagesize)
-        c.setFillColor(HexColor('#aa557f'))
+        c.setFillColor(HexColor(color2))
         c.rect(200, 200, width - 400, height - 600, fill=1)
         c.setTitle("Festivals 2027")
         count = 0
