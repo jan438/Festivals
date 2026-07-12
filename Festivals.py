@@ -191,7 +191,7 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
             drawing = scaleSVG('SVG/date.svg', 0.08)
             c.setLineWidth(0)
             c.setFillColor(white)
-            c.rect(festival_x + 75, festival_y + 115, 45, 45, fill=1)
+            c.rect(festival_x + 78, festival_y + 118, 45, 45, fill=1)
             renderPDF.draw(drawing, c, festival_x + 70, festival_y + 110)
             c.setFillColor(black)
             c.setFont(festivalfont, 25)
