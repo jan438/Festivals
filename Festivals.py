@@ -22,10 +22,10 @@ bottommargin = 200
 leftmargin = 60
 side_octogon = 100.0
 monthnames = ["Jan","Feb","Mrt","Apr","Mei","Jun","Jul","Aug","Sep","Okt","Nov","Dec"]
-color1 = '#FECDE5'
-color2 = '#aa557f'
-color3 = '#aaaa00'
-color4 = '#ffaa00'
+color1 = '#9bc400'
+color2 = '#8076a3'
+color3 = '#f9c5bd'
+color4 = '#7c677f'
 
 class FestivalEvent:
     def __init__(self, summary, startday, endday, location, description, startmonth, endmonth):
