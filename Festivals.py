@@ -25,6 +25,7 @@ monthnames = ["Jan","Feb","Mrt","Apr","Mei","Jun","Jul","Aug","Sep","Okt","Nov",
 color1 = '#FECDE5'
 color2 = '#aa557f'
 color3 = '#aaaa00'
+color4 = '#ffaa00'
 
 class FestivalEvent:
     def __init__(self, summary, startday, endday, location, description, startmonth, endmonth):
@@ -133,7 +134,7 @@ def octagon(c, x, y, s):
     c.setLineWidth(10)
     c.setLineCap(1)
     c.setStrokeColor(HexColor(color3))
-    c.setFillColor(HexColor('#ffaa00'))
+    c.setFillColor(HexColor(color4))
     angle = 45
     p = c.beginPath()
     p.moveTo(x, y)
