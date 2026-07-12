@@ -8,7 +8,7 @@ from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfbase.pdfmetrics import registerFontFamily
 from svglib.svglib import svg2rlg, load_svg_file, SvgRenderer
 from reportlab.graphics import renderPDF
-from reportlab.lib.colors import yellow, green, red, blue, black, tan, HexColor
+from reportlab.lib.colors import yellow, green, red, blue, black, white, tan, HexColor
 from reportlab.lib.units import inch, cm, mm
 from math import pi, cos, sin, radians, sqrt
 
@@ -189,6 +189,8 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
             drawing = scaleSVG('SVG/' + name + '.svg', festival_s)
             renderPDF.draw(drawing, c, festival_x, festival_y)
             drawing = scaleSVG('SVG/date.svg', 0.08)
+            c.setFillColor(white)
+            c.rect(festival_x + 70, festival_y + 110, 40, 40, fill=1)
             renderPDF.draw(drawing, c, festival_x + 70, festival_y + 110)
             c.setFillColor(black)
             c.setFont(festivalfont, 25)
