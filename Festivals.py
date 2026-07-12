@@ -188,7 +188,7 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
             octagon(c, x=festival_x, y=festival_y, s=side_octogon)
             drawing = scaleSVG('SVG/' + name + '.svg', festival_s)
             renderPDF.draw(drawing, c, festival_x, festival_y)
-            drawing = scaleSVG('SVG/blankdate.svg', 0.45)
+            drawing = scaleSVG('SVG/date.svg', 0.05)
             renderPDF.draw(drawing, c, festival_x + 70, festival_y + 110)
             renderPDF.draw(drawing, c, festival_x + 120, festival_y - 70)
             c.setFillColor(black)
