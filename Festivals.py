@@ -200,6 +200,7 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
             c.setFillColor(black)
             c.setFont(festivalfont, 25)
             c.drawString(festival_x, festival_y, name)
+            print(festivaldata[index][8])
             count += 1
             col += 1
             if col == 3:
