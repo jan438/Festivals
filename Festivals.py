@@ -195,8 +195,8 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
             sday = f"{festivalevents[i].startday:02d}"
             eday = f"{festivalevents[i].endday:02d}"
             dates = sday + "-" + eday
-            c.drawString(festival_x + 80, festival_y + 120, dates)
-            c.drawString(festival_x + 85, festival_y + 140, monthnames[festivalevents[i].endmonth-1])
+            c.drawString(festival_x + 78, festival_y + 122, dates)
+            c.drawString(festival_x + 85, festival_y + 142, monthnames[festivalevents[i].endmonth-1])
             c.setFillColor(black)
             c.setFont(festivalfont, 25)
             c.drawString(festival_x, festival_y, name)
