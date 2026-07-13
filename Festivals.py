@@ -199,8 +199,8 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
             c.drawString(festival_x + 85, festival_y + 142, monthnames[festivalevents[i].endmonth-1])
             c.setFillColor(black)
             c.setFont(festivalfont, 25)
-            c.drawString(festival_x, festival_y, name)
-            print(festivaldata[index][8])
+            if festivaldata[index][8] == 'n':
+                c.drawString(festival_x, festival_y, name)
             count += 1
             col += 1
             if col == 3:
