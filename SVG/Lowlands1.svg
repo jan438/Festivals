@@ -47,7 +47,7 @@
         <style
            id="style1">
       .st0 {
-        fill: url(#linear-gradient2);
+        fill: #ffff80;
       }
 
       .st1 {
