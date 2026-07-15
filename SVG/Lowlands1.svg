@@ -191,61 +191,13 @@
       }
 
       .st35 {
-        fill: url(#linear-gradient);
+        fill: #6e7ec3;
       }
 
       .st36 {
         fill: #353168;
       }
     </style>
-        <linearGradient
-           id="linear-gradient"
-           x1="436.8"
-           y1="336.7"
-           x2="-36.8"
-           y2="63.3"
-           gradientUnits="userSpaceOnUse">
-          <stop
-             offset=".1"
-             stop-color="#6c0056"
-             id="stop1" />
-          <stop
-             offset=".1"
-             stop-color="#6c0056"
-             id="stop2" />
-          <stop
-             offset=".2"
-             stop-color="#6c3181"
-             id="stop3" />
-          <stop
-             offset=".2"
-             stop-color="#6d5ba5"
-             id="stop4" />
-          <stop
-             offset=".3"
-             stop-color="#6e7ec3"
-             id="stop5" />
-          <stop
-             offset=".3"
-             stop-color="#6e98da"
-             id="stop6" />
-          <stop
-             offset=".4"
-             stop-color="#6eabea"
-             id="stop7" />
-          <stop
-             offset=".4"
-             stop-color="#6eb7f4"
-             id="stop8" />
-          <stop
-             offset=".5"
-             stop-color="#6fbbf8"
-             id="stop9" />
-          <stop
-             offset=".9"
-             stop-color="#6c0056"
-             id="stop10" />
-        </linearGradient>
         <linearGradient
            id="linear-gradient1"
            x1="136.2"
