@@ -98,7 +98,7 @@
         fill: #ffff80;
       }
 
-      .st34, .st35, .st36 {
+      .st34, .st36 {
         isolation: isolate;
       }
 
@@ -143,10 +143,6 @@
       }
 
       .st19 {
-        fill: #ffff80;
-      }
-
-      .st35 {
         fill: #ffff80;
       }
 
