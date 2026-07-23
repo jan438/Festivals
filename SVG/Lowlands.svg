@@ -87,7 +87,7 @@
      borderlayer="false"
      showgrid="false" />
   <g
-     fill-rule="evenodd"
+     fill-rule="nonzero"
      clip-rule="evenodd"
      id="g4">
     <path
