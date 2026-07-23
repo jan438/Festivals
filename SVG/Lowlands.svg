@@ -70,8 +70,8 @@
      inkscape:pagecheckerboard="true"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="0.2744"
-     inkscape:cx="326.16618"
-     inkscape:cy="1956.9971"
+     inkscape:cx="1860.4227"
+     inkscape:cy="1960.6414"
      inkscape:window-width="1210"
      inkscape:window-height="933"
      inkscape:window-x="0"
@@ -97,7 +97,8 @@
        id="path9" />
     <path
        d="m 148.326,87.472 5.74,1.179 0.053,13.738 -4.076,0.846 z"
-       id="path8" />
+       id="path8"
+       style="fill:#00c8e5;fill-opacity:1" />
     <path
        d="m 125.312,82.423 h -5.689 v 26.681 h 7.611 l -2.767,-6.1 0.949,-7.331 7.022,13.403 h 5.611 V 82.423 h -7.611 l 2.716,6.074 -1.025,7.099 z"
        id="path7" />
@@ -106,7 +107,8 @@
        id="path6" />
     <path
        d="m 109.039,97.57 h -5.459 l 2.613,-6.613 z"
-       id="path5" />
+       id="path5"
+       style="stroke-width:1.00001813;stroke-dasharray:none;fill:#00c800;fill-opacity:1" />
     <path
        d="m 89.894,82.449 -7.919,0.026 v 26.654 H 94.02 l 0.615,-7.561 -7.227,1.871 z"
        id="path2"
