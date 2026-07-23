@@ -15,6 +15,18 @@
   <defs
      id="defs4">
     <linearGradient
+       id="linearGradient3"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#8a0000;stop-opacity:1;"
+         offset="0"
+         id="stop4" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop5" />
+    </linearGradient>
+    <linearGradient
        id="linearGradient1"
        inkscape:collect="always">
       <stop
@@ -39,6 +51,15 @@
        x2="25.49"
        y2="95.8655"
        gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3"
+       id="linearGradient5"
+       x1="81.975"
+       y1="95.789"
+       x2="94.635"
+       y2="95.789"
+       gradientUnits="userSpaceOnUse" />
   </defs>
   <sodipodi:namedview
      id="namedview4"
@@ -49,7 +70,7 @@
      inkscape:pagecheckerboard="true"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="0.2744"
-     inkscape:cx="324.34402"
+     inkscape:cx="326.16618"
      inkscape:cy="1956.9971"
      inkscape:window-width="1210"
      inkscape:window-height="933"
@@ -59,7 +80,8 @@
      inkscape:current-layer="g4"
      pagecolor="#ffffff"
      showborder="false"
-     borderlayer="false" />
+     borderlayer="false"
+     showgrid="false" />
   <g
      fill-rule="evenodd"
      clip-rule="evenodd"
@@ -87,7 +109,8 @@
        id="path5" />
     <path
        d="m 89.894,82.449 -7.919,0.026 v 26.654 H 94.02 l 0.615,-7.561 -7.227,1.871 z"
-       id="path2" />
+       id="path2"
+       style="fill:url(#linearGradient5)" />
     <path
        d="m 58.781,88.446 c 0.641,-1.974 1.23,-3.946 1.845,-5.971 l -8.636,0.025 6.689,26.654 h 5.126 l 2.255,-8.074 2.127,8.074 5.049,-0.025 7.201,-26.654 h -8.585 l 1.819,5.895 -3.101,8.15 -2.435,-9.714 h -4.023 l -2.614,9.714 z"
        id="path1" />
