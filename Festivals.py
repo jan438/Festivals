@@ -164,8 +164,7 @@ def octagon(c, x, y, s):
     c.drawPath(p, fill=1, stroke=1)
   
 def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
-    position = 500
-    row = 2
+    row = 3
     col = 0
     try:
         c = canvas.Canvas(filename, pagesize=pagesize)
@@ -206,14 +205,12 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
             if col == 3:
                 col = 0
                 row -= 1
-            position -= 1
             if count == maxfestivalspage:
                 if i < len(festivalevents) - 1:
                     print(i, len(festivalevents) - 1)
                     c.showPage()
                     c.setFillColor(HexColor(color1))
                     c.rect(0, 0, width, height, fill=1)
-                    position = 500
                     count = 0
         c.showPage()
         c.save()
