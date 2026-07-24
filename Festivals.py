@@ -165,6 +165,9 @@ def octagon(c, x, y, s):
   
 def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
     c = canvas.Canvas(filename, pagesize=pagesize)
+    width, height = pagesize
+    c.setFillColor(HexColor(color1))
+    c.rect(0, 0, width, height, fill=1)
     c.setTitle(title)
     c.setFont(festivalfont, 25)
     c.setFillColor(HexColor("#000000"))
@@ -173,12 +176,9 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
     row = 3
     col = 0
     try:
-        width, height = pagesize
-        c.setFillColor(HexColor(color1))
-        c.rect(0, 0, width, height, fill=1)
         #cadre(c, pagesize)
         c.setFillColor(HexColor(color2))
-        c.rect(200, 200, width - 400, height - 400, fill=1)
+        c.rect(200, 200, width - 400, height - 420, fill=1)
         c.setTitle("Festivals 2027")
         count = 0
         for i in range(len(festivalevents)):
