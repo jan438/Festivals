@@ -20,7 +20,6 @@ maxfestivalspage = 12
 index = -1
 bottommargin = 140
 leftmargin = 60
-side_octogon = 100.0
 monthnames = ["Jan","Feb","Mrt","Apr","Mei","Jun","Jul","Aug","Sep","Okt","Nov","Dec"]
 
 #Soft Beach
@@ -193,6 +192,7 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
     c.setTitle("Festivals 2027")
     c.drawString(titlex_value, titley_value, "Festivals 2027")
     octogon_value = variable_dict["octogon" + ps]
+    side_octogon_value = variable_dict["side_octogon" + ps]
     row = 3
     col = 0
     try:
@@ -210,7 +210,7 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
             festival_s = float(festivaldata[index][7])
             dx = float(festivaldata[index][5])
             dy = float(festivaldata[index][6])
-            octagon(c, x=festival_x, y=festival_y, s=side_octogon)
+            octagon(c, x=festival_x, y=festival_y, s=side_octogon_value)
             drawing = scaleSVG('SVG/' + name + '.svg', festival_s)
             renderPDF.draw(drawing, c, festival_x + dx, festival_y + dy)
             drawing = scaleSVG('SVG/daterect.svg', 0.1)
