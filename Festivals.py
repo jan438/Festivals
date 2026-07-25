@@ -194,11 +194,12 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
             drawing = scaleSVG('SVG/daterect.svg', 0.1)
             renderPDF.draw(drawing, c, festival_x + 70, festival_y + 110)
             c.setFillColor(black)
-            c.setFont(festivalfont, 20)
             sday = f"{festivalevents[i].startday:02d}"
             eday = f"{festivalevents[i].endday:02d}"
             dates = sday + "-" + eday
+            c.setFont(festivalfont, 19)
             c.drawString(festival_x + 78, festival_y + 122, dates)
+            c.setFont(festivalfont, 20)
             c.drawString(festival_x + 85, festival_y + 142, monthnames[festivalevents[i].endmonth-1])
             c.setFillColor(black)
             c.setFont(festivalfont, 25)
