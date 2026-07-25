@@ -19,7 +19,6 @@ festivalevents = []
 maxfestivalspage = 12
 index = -1
 bottommargin = 140
-leftmargin = 60
 monthnames = ["Jan","Feb","Mrt","Apr","Mei","Jun","Jul","Aug","Sep","Okt","Nov","Dec"]
 
 #Soft Beach
@@ -195,6 +194,7 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
     angle = 45
     dy = side_octogon_value * sin(radians(angle))
     radius_octogon = side_octogon_value + 2 * sqrt(side_octogon_value**2 - dy**2)
+    leftmargin = (width - 3 * radius_octogon) / 2
     row = 3
     col = 0
     try:
