@@ -1,0 +1,26 @@
+1 Soft beach
+==========
+
+Bright blue: #51e2f5
+
+Blue Green: #9df9ef
+
+Dusty White: #edf756
+
+Pink Sand: #ffa8B6
+
+Dark Sand: #a28089
+
+2 Purple 90
+==========
+
+Ice Cold: #a0d2eb
+
+Freeze Purple: #e5eaf5
+
+Medium Purple: #d0bdf4
+
+Purple Pain: #8458B3
+
+Heavy Purple: #a28089
+
