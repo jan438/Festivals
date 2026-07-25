@@ -192,6 +192,7 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
     c.setFillColor(HexColor("#000000"))
     c.setTitle("Festivals 2027")
     c.drawString(titlex_value, titley_value, "Festivals 2027")
+    octogon_value = variable_dict["octogon" + ps]
     row = 3
     col = 0
     try:
@@ -204,8 +205,8 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
             name = festivalevents[i].summary
             c.setFillColor(HexColor('#000000'))
             index = lookupfestival(name)
-            festival_x = leftmargin + col * 246.42
-            festival_y = bottommargin + row * 246.42
+            festival_x = leftmargin + col * octogon_value
+            festival_y = bottommargin + row * octogon_value
             festival_s = float(festivaldata[index][7])
             dx = float(festivaldata[index][5])
             dy = float(festivaldata[index][6])
