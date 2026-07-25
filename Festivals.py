@@ -22,6 +22,22 @@ bottommargin = 140
 leftmargin = 60
 side_octogon = 100.0
 monthnames = ["Jan","Feb","Mrt","Apr","Mei","Jun","Jul","Aug","Sep","Okt","Nov","Dec"]
+
+#Soft Beach
+#Bright Blue: #51e2f5
+#Blue Green: #9df9ef
+#Dusty White: #edf756
+#Pink Sand: #ffa8B6
+#Dark Sand: #a28089
+
+#Purple 90
+#Ice Cold: #a0d2eb
+#Freeze Purple: #e5eaf5
+#Medium Purple: #d0bdf4
+#Purple Pain: #8458B3
+#Heavy Purple: #a28089
+
+
 color1 = '#9bc400'
 color2 = '#8076a3'
 color3 = '#7c677f'
