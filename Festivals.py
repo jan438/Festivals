@@ -180,6 +180,7 @@ def octagon(c, x, y, s):
 def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
     c = canvas.Canvas(filename, pagesize=pagesize)
     width, height = pagesize
+    aspect_ratio_value = variable_dict["aspect_ratio" + ps]
     c.setFillColor(HexColor(color1))
     c.rect(0, 0, width, height, fill=1)
     c.setTitle(title)
@@ -209,13 +210,13 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
             index = lookupfestival(name)
             festival_x = leftmargin + col * radius_octogon
             festival_y = bottommargin + row * radius_octogon
-            festival_s = float(festivaldata[index][7])
+            festival_s = float(festivaldata[index][7]) * aspect_ratio_value
             dx = float(festivaldata[index][5])
             dy = float(festivaldata[index][6])
             octagon(c, x=festival_x, y=festival_y, s=side_octogon_value)
             drawing = scaleSVG('SVG/' + name + '.svg', festival_s)
             renderPDF.draw(drawing, c, festival_x + dx, festival_y + dy)
-            drawing = scaleSVG('SVG/daterect.svg', 0.1)
+            drawing = scaleSVG('SVG/daterect.svg', 0.1 * aspect_ratio_value)
             renderPDF.draw(drawing, c, festival_x + 70, festival_y + 110)
             c.setFillColor(black)
             sday = f"{festivalevents[i].startday:02d}"
