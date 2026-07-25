@@ -201,7 +201,7 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
     try:
         #cadre(c, pagesize)
         c.setFillColor(HexColor(color2))
-        c.rect(200, 200, width - 400, height - 420, fill=1)
+        c.rect(200 * aspect_ratio_value, 200 * aspect_ratio_value, width - (400 * aspect_ratio_value), height - (420 * aspect_ratio_value), fill=1)
         c.setTitle("Festivals 2027")
         count = 0
         for i in range(len(festivalevents)):
