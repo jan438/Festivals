@@ -209,7 +209,7 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
             c.setFillColor(HexColor('#000000'))
             index = lookupfestival(name)
             festival_x = leftmargin + col * radius_octogon
-            festival_y = bottommargin + row * radius_octogon
+            festival_y = bottommargin * aspect_ratio_value + row * radius_octogon
             festival_s = float(festivaldata[index][7]) * aspect_ratio_value
             dx = float(festivaldata[index][5])
             dy = float(festivaldata[index][6])
