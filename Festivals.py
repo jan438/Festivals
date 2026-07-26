@@ -185,12 +185,12 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
     c.rect(0, 0, width, height, fill=1)
     c.setTitle(title)
     titlefontsize_value = variable_dict["titlefontsize"]
-    titlex_value = variable_dict["titlex" + ps]
-    titley_value = variable_dict["titley" + ps]
+    titlex_value = variable_dict["titlex"]
+    titley_value = variable_dict["titley"]
     c.setFont(festivalfont, titlefontsize_value * aspect_ratio_value)
     c.setFillColor(HexColor("#000000"))
     c.setTitle("Festivals 2027")
-    c.drawString(titlex_value, titley_value, "Festivals 2027")
+    c.drawString(titlex_value * aspect_ratio_value, titley_value * aspect_ratio_value, "Festivals 2027")
     side_octogon_value = variable_dict["side_octogon" + ps]
     angle = 45
     dy = side_octogon_value * sin(radians(angle))
