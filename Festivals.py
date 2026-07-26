@@ -180,17 +180,17 @@ def octagon(c, x, y, s):
 def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
     c = canvas.Canvas(filename, pagesize=pagesize)
     width, height = pagesize
-    aspect_ratio_value = variable_dict["aspect_ratio" + ps]
+    aspr = variable_dict["aspect_ratio" + ps]
     c.setFillColor(HexColor(color1))
     c.rect(0, 0, width, height, fill=1)
     c.setTitle(title)
     titlefontsize_value = variable_dict["titlefontsize"]
     titlex_value = variable_dict["titlex"]
     titley_value = variable_dict["titley"]
-    c.setFont(festivalfont, titlefontsize_value * aspect_ratio_value)
+    c.setFont(festivalfont, titlefontsize_value * aspr)
     c.setFillColor(HexColor("#000000"))
     c.setTitle("Festivals 2027")
-    c.drawString(titlex_value * aspect_ratio_value, titley_value * aspect_ratio_value, "Festivals 2027")
+    c.drawString(titlex_value * aspr, titley_value * aspr, "Festivals 2027")
     side_octogon_value = variable_dict["side_octogon" + ps]
     angle = 45
     dy = side_octogon_value * sin(radians(angle))
@@ -201,7 +201,7 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
     try:
         #cadre(c, pagesize)
         c.setFillColor(HexColor(color2))
-        c.rect(200 * aspect_ratio_value, 200 * aspect_ratio_value, width - (400 * aspect_ratio_value), height - (420 * aspect_ratio_value), fill=1)
+        c.rect(200 * aspr, 200 * aspr, width - (400 * aspr), height - (420 * aspr), fill=1)
         c.setTitle("Festivals 2027")
         count = 0
         for i in range(len(festivalevents)):
@@ -209,23 +209,23 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
             c.setFillColor(HexColor('#000000'))
             index = lookupfestival(name)
             festival_x = leftmargin + col * radius_octogon
-            festival_y = bottommargin * aspect_ratio_value + row * radius_octogon
-            festival_s = float(festivaldata[index][7]) * aspect_ratio_value
+            festival_y = bottommargin * aspr + row * radius_octogon
+            festival_s = float(festivaldata[index][7]) * aspr
             dx = float(festivaldata[index][5])
             dy = float(festivaldata[index][6])
             octagon(c, x=festival_x, y=festival_y, s=side_octogon_value)
             drawing = scaleSVG('SVG/' + name + '.svg', festival_s)
             renderPDF.draw(drawing, c, festival_x + dx, festival_y + dy)
-            drawing = scaleSVG('SVG/daterect.svg', 0.1 * aspect_ratio_value)
-            renderPDF.draw(drawing, c, festival_x + 70 * aspect_ratio_value, festival_y + 110 * aspect_ratio_value)
+            drawing = scaleSVG('SVG/daterect.svg', 0.1 * aspr)
+            renderPDF.draw(drawing, c, festival_x + 70 * aspr, festival_y + 110 * aspr)
             c.setFillColor(black)
             sday = f"{festivalevents[i].startday:02d}"
             eday = f"{festivalevents[i].endday:02d}"
             dates = sday + "-" + eday
-            c.setFont(festivalfont, 19 * aspect_ratio_value)
-            c.drawString(festival_x + 78 * aspect_ratio_value, festival_y + 122 * aspect_ratio_value, dates)
-            c.setFont(festivalfont, 20 * aspect_ratio_value)
-            c.drawString(festival_x + 85 * aspect_ratio_value, festival_y + 142 * aspect_ratio_value, monthnames[festivalevents[i].endmonth-1])
+            c.setFont(festivalfont, 19 * aspr)
+            c.drawString(festival_x + 78 * aspr, festival_y + 122 * aspr, dates)
+            c.setFont(festivalfont, 20 * aspr)
+            c.drawString(festival_x + 85 * aspr, festival_y + 142 * aspr, monthnames[festivalevents[i].endmonth-1])
             c.setFillColor(black)
             c.setFont(festivalfont, 25)
             if festivaldata[index][8] == 'n':
