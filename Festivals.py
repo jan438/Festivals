@@ -184,17 +184,17 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
     c.setFillColor(HexColor(color1))
     c.rect(0, 0, width, height, fill=1)
     c.setTitle(title)
-    titlefontsize_value = variable_dict["titlefontsize"]
-    titlex_value = variable_dict["titlex"]
-    titley_value = variable_dict["titley"]
-    c.setFont(festivalfont, titlefontsize_value * aspr)
+    titlefontsize = variable_dict["titlefontsize"]
+    titlex = variable_dict["titlex"]
+    titley = variable_dict["titley"]
+    c.setFont(festivalfont, titlefontsize * aspr)
     c.setFillColor(HexColor("#000000"))
     c.setTitle("Festivals 2027")
-    c.drawString(titlex_value * aspr, titley_value * aspr, "Festivals 2027")
-    side_octogon_value = variable_dict["side_octogon"] * aspr
+    c.drawString(titlex * aspr, titley * aspr, "Festivals 2027")
+    side_octogon = variable_dict["side_octogon"] * aspr
     angle = 45
-    dy = side_octogon_value * sin(radians(angle))
-    radius_octogon = side_octogon_value + 2 * sqrt(side_octogon_value**2 - dy**2)
+    dy = side_octogon * sin(radians(angle))
+    radius_octogon = side_octogon + 2 * sqrt(side_octogon**2 - dy**2)
     leftmargin = (width - 3 * radius_octogon) / 2
     row = 3
     col = 0
@@ -213,7 +213,7 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
             festival_s = float(festivaldata[index][7]) * aspr
             dx = float(festivaldata[index][5])
             dy = float(festivaldata[index][6])
-            octagon(c, x=festival_x, y=festival_y, s=side_octogon_value)
+            octagon(c, x=festival_x, y=festival_y, s=side_octogon)
             drawing = scaleSVG('SVG/' + name + '.svg', festival_s)
             renderPDF.draw(drawing, c, festival_x + dx, festival_y + dy)
             drawing = scaleSVG('SVG/daterect.svg', 0.1 * aspr)
