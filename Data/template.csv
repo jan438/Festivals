@@ -1,7 +1,6 @@
 aspect_ratioA3;1.0;
 aspect_ratioA4;0.707;
-titlefontsizeA3;25.0;
-titlefontsizeA4;20.0;
+titlefontsize;40.0;
 titlexA3;200.0;
 titlexA4;180.0;
 titleyA3;1100.0;

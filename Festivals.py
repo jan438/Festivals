@@ -184,10 +184,10 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
     c.setFillColor(HexColor(color1))
     c.rect(0, 0, width, height, fill=1)
     c.setTitle(title)
-    titlefontsize_value = variable_dict["titlefontsize" + ps]
+    titlefontsize_value = variable_dict["titlefontsize"]
     titlex_value = variable_dict["titlex" + ps]
     titley_value = variable_dict["titley" + ps]
-    c.setFont(festivalfont, titlefontsize_value)
+    c.setFont(festivalfont, titlefontsize_value * aspect_ratio_value)
     c.setFillColor(HexColor("#000000"))
     c.setTitle("Festivals 2027")
     c.drawString(titlex_value, titley_value, "Festivals 2027")
