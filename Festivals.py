@@ -191,7 +191,7 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
     c.setFillColor(HexColor("#000000"))
     c.setTitle("Festivals 2027")
     c.drawString(titlex_value * aspr, titley_value * aspr, "Festivals 2027")
-    side_octogon_value = variable_dict["side_octogon" + ps]
+    side_octogon_value = variable_dict["side_octogon"] * aspr
     angle = 45
     dy = side_octogon_value * sin(radians(angle))
     radius_octogon = side_octogon_value + 2 * sqrt(side_octogon_value**2 - dy**2)
