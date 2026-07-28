@@ -216,6 +216,12 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
             dy = float(festivaldata[index][6]) * aspr
             octagon(c, x=festival_x, y=festival_y, s=side_octogon)
             svgfile = 'SVG/' + name + '.svg'
+            tree = ET.parse(svgfile)
+            root = tree.getroot()
+            attrib = root.attrib
+            for name, value in attrib.items():
+                if name == "viewBox":
+                    print('{0}="{1}"'.format(name, value), festivaldata[index][0])
             drawing = scaleSVG(svgfile, festival_s)
             renderPDF.draw(drawing, c, festival_x + dx, festival_y + dy)
             drawing = scaleSVG('SVG/daterect.svg', 0.1 * aspr)
