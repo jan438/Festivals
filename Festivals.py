@@ -222,6 +222,8 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
             for name, value in attrib.items():
                 if name == "viewBox":
                     print('{0}="{1}"'.format(name, value), festivaldata[index][0])
+                if name == "width":
+                    print('{0}="{1}"'.format(name, value))
             drawing = scaleSVG(svgfile, festival_s)
             renderPDF.draw(drawing, c, festival_x + dx, festival_y + dy)
             drawing = scaleSVG('SVG/daterect.svg', 0.1 * aspr)
