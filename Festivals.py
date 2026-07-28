@@ -11,6 +11,7 @@ from reportlab.graphics import renderPDF
 from reportlab.lib.colors import yellow, green, red, blue, black, white, tan, HexColor
 from reportlab.lib.units import inch, cm, mm
 from math import pi, cos, sin, radians, sqrt
+import xml.etree.ElementTree as ET
 
 festivalfont = "LiberationSerif"
 festivaldata = []
@@ -214,7 +215,8 @@ def create_Fesival_pdf(filename, ps, pagesize, title="Festivals"):
             dx = float(festivaldata[index][5]) * aspr
             dy = float(festivaldata[index][6]) * aspr
             octagon(c, x=festival_x, y=festival_y, s=side_octogon)
-            drawing = scaleSVG('SVG/' + name + '.svg', festival_s)
+            svgfile = 'SVG/' + name + '.svg'
+            drawing = scaleSVG(svgfile, festival_s)
             renderPDF.draw(drawing, c, festival_x + dx, festival_y + dy)
             drawing = scaleSVG('SVG/daterect.svg', 0.1 * aspr)
             renderPDF.draw(drawing, c, festival_x + 70 * aspr, festival_y + 110 * aspr)
