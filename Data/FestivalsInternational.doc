@@ -11,34 +11,50 @@ A3 en A4 hebben dezelfde hoogte-breedteverhouding (aspect ratio) van 1:sqrt{2}
 gold = #FFCA00
 
 
+Count eventslines 100
+Count festival events 12
+
+
 width="2500"
 height="2500"
 viewBox="0 0 192.756 192.756" North Sea Jazz
+=================
 width="228"
 height="120"
 viewBox="0 0 228 120" Sziget
+=================
 viewBox="0 0 1080 1080" Reggae Lake
+=================
 width="600.000000pt"
 height="209.000000pt"
 viewBox="0 0 600.000000 209.000000" Glastonbury
+=================
 width="1752.000000pt"
 height="357.000000pt"
 viewBox="0 0 1752.000000 357.000000" Rock Werchter
+=================
 width="440"
 height="100"
+=================
 viewBox="0 0 337.49335 69.673409" Coachella
 height="69.673409"
 width="337.49335"
+=================
 height="92"
 viewBox="0 0 808 92" Best Kept Secret
 width="808"
+=================
 viewBox="0 0 960 960" Defqon.1
+=================
 viewBox="0 0 478.6 185.3" Pinkpop
 width="2500"
 height="968"
+=================
 viewBox="0 0 449.65332 172.36" Roskilde
 height="172.36"
 width="449.65332"
+=================
 width="2500"
 height="2500"
 viewBox="0 0 192.756 192.756" Lowlands
+=================
